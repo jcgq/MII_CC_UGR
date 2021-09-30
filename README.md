@@ -10,7 +10,7 @@ La aplicación tiene varios clientes:
 - Clientes que buscan recetas: con unos valores, tipo de calorías, objetivos... Pueden dar opiniones y puntuar.
 
 ## Características
-- Se validan que se añadan productos que existan, que no se hayan creado productos existentes, que no hay recetas excesivamente iguales.
+- Se validan que se añadan productos que existan, que no se hayan creado productos existentes, que no hay recetas excesivamente iguales (Se utilizará un algoritmo de Clustering para medir similitud entre recetas).
 - Se utilizarán algoritmos que devuelvan a los clientes las recetas que más se ajustan a las necesidades que buscan. Será una especie de sistema de recomendación. Se realizará una clasificación calórica de las recetas.
 
 
