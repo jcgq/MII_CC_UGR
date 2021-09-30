@@ -10,8 +10,7 @@ La aplicación tiene varios clientes:
 
 ## Características
 - Se validan que se añadan productos que existan, que no se hayan creado productos existentes, que no hay recetas excesivamente iguales.
-- Se utilizarán algoritmos que devuelvan a los clientes las recetas que más se ajustan a las necesidades que buscan. Utilizando el algoritmo voraz del "Problema de la mochila"
-
+- Se utilizarán algoritmos que devuelvan a los clientes las recetas que más se ajustan a las necesidades que buscan. Será una especie de sistema de recomendación. Se realizará una clasificación calórica de las recetas.
 
 
 
