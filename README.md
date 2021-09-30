@@ -1,5 +1,5 @@
 ﻿# Repositorio para la asignatura de Cloud Computing
- Para ver la configuración del hito0 Pulse [aquí](doc/configuración.md)
+ Para ver la configuración del hito0, pulse --> [aquí](doc/configuración.md)
  
 ## Explicación del proyecto
 
