@@ -1,4 +1,7 @@
 ﻿# Repositorio para la asignatura de Cloud Computing
+ 
+ 
+## Explicación del proyecto
 
 Crear un sistema de búsqueda y clasificación de recetas con productos ecológicos.
 La aplicación tiene varios clientes:
