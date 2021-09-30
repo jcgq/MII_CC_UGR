@@ -3,7 +3,8 @@
  
 ## Explicación del proyecto
 
-Crear un sistema de búsqueda y clasificación de recetas con productos ecológicos.
+Crear un sistema de recomendación de recetas. Se podrán añadir recetas y búscar según las necesidades del cliente.
+
 La aplicación tiene varios clientes:
 - Clientes que crean recetas: añaden alimentos, descripciones, recetas... Puede obtener puntuaciones.
 - Clientes que buscan recetas: con unos valores, tipo de calorías, objetivos... Pueden dar opiniones y puntuar.
