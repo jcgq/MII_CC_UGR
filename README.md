@@ -22,6 +22,7 @@ Será multiusuario, se podrá acceder al sistema desde distintos dispositivos y 
 
 ## Arquitectura
 La arquitectura que se va a utilizar es : Arquitectura basada en microservicios
+Esto son los motivos
 
 
 
