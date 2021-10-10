@@ -21,8 +21,11 @@ La lógica de mi sistema se dividirá en varias partes:
 Será multiusuario, se podrá acceder al sistema desde distintos dispositivos y se accederá a través de Internet.
 
 ## Arquitectura
-La arquitectura que se va a utilizar es : Arquitectura basada en microservicios
-Esto son los motivos
+La arquitectura que se va a utilizar es: Arquitectura basada en microservicios.
+Esto es debido a que cada microservicio es independiente de los demás, por lo que en caso de que alguno falle, no pondrá en peligro el funcionamiento del sistema. Esto, hace que sea muy escalable y mantenible.
+Al poder tratar cada microservicio de forma independiente, tienes que centrarte en cada uno para escribirlo, mantener y desplegarlo. De esta manera, no hace falta entender el conjunto del sistema para poder arreglar o manejar un microservicio.
+
+He estado informándome sobre otras arquitecturas, de las que expongo una breve descripción y porqué he decidido no utilizarlas: [enlace](doc/arquitecturas.md)
 
 
 
