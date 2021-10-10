@@ -21,7 +21,7 @@ La lógica de mi sistema se dividirá en varias partes:
 Será multiusuario, se podrá acceder al sistema desde distintos dispositivos y se accederá a través de Internet.
 
 ## Arquitectura
-La arquitectura que se va a utilizar es :
+La arquitectura que se va a utilizar es : Arquitectura basada en microservicios
 
 
 
