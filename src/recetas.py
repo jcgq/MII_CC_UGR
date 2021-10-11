@@ -5,3 +5,5 @@ class recetas:
 		self.elaboracion = elaboracion
 		self.tiempo = tiempo
 
+	def compararRecetas(self, receta1, receta2):
+		return None
