@@ -18,5 +18,4 @@ alimento = traduccion.text
 #print(e.search_nutrient("1 large apple")['uri'])
 #print(e.search_recipe("onion and chicken"))
 print(appi.apiEdamam.search_food(alimento)['parsed'][0]['food']['nutrients'])
-
 #Calorias,Proteina, Grasa, CarboHidratos, Fibra
