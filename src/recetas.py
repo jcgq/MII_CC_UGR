@@ -10,3 +10,6 @@ class recetas:
 
 	def calcularNivelCalorico(self, receta):
 		return None
+
+	def obtenerReceta(self, interesUsuario):
+		return None
