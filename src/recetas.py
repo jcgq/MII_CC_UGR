@@ -7,4 +7,6 @@ class recetas:
 
 	def compararRecetas(self, receta1, receta2):
 		return None
-		
+
+	def calcularNivelCalorico(self, receta):
+		return None
