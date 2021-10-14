@@ -9,6 +9,8 @@ Me apoyo en los siguientes enlaces:
 - [Enlace 1](https://vegagestion.es/almacenamiento-la-nube-caracteristicas-ventajas-desventajas/)
 - [Enlace 2](https://www.ntxpro.net/sistemas/caracteristicas-de-la-nube/)
 
+# User Journey
+Podrá leerlo en el siguiente enlace [Clique aquí](https://github.com/jcgq/MII_CC_UGR/wiki)
 
 # Lenguajes y herramientas
 ## Lenguaje
