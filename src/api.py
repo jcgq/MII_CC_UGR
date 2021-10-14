@@ -34,4 +34,3 @@ print(valorNutricional)
 #print(e.search_nutrient("1 large apple")['uri'])
 #print(e.search_recipe("onion and chicken"))
 #Calorias,Proteina, Grasa, CarboHidratos, Fibra
-assert(appi.traducirPalabra("pollo") == "chicken")
