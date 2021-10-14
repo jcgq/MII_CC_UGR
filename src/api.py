@@ -43,7 +43,7 @@ for i in range(0,10):
 	valorNutricional = appi.obtenerValorNutricional(alimento)
 	categoria = appi.obtenerCategoria(alimento)
 
-
+	#Definición de la estructura del JSON
 	datos = {
 		'nombre':alimento,
 		'nutrientes':valorNutricional,
