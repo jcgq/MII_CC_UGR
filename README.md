@@ -4,7 +4,11 @@
 - Para ver la explicación de mi proyecto, [clique en este enlace](doc/explicacionProyecto.md)
 
 # Sistema en la nube
-Mi sistema se pude desplegar en la nube, porque va dirigido a muchos usuarios, que pueden interactuar a la vez y puede obtener un beneficio en tiempo real. Va a poder utilizarse desde distintos sitios y lugares.
+Mi sistema se pude desplegar en la nube, porque va dirigido a muchos usuarios, que pueden interactuar a la vez y puede obtener un beneficio en tiempo real. Los usuarios, subiendo sus recetas obtendrán el beneficio de características calóricas, de composición, cantidades... que contiene su receta, y quien busque recetas, podrá obtener como beneficio, un conjunto de recetas que se adecuen a sus necesidades. Va a poder utilizarse desde distintos sitios y lugares. El software estará localizado en un solo lugar.
+Me apoyo en los siguientes enlaces:
+- (Enlace 1)[https://vegagestion.es/almacenamiento-la-nube-caracteristicas-ventajas-desventajas/]
+- (Enlace 2)[https://www.ntxpro.net/sistemas/caracteristicas-de-la-nube/]
+
 
 # Lenguajes y herramientas
 ## Lenguaje
@@ -19,7 +23,8 @@ Como FrameWork, he estado leyendo sobre Django, Pyramid, Web2py... Pero no me ha
 
 ## API
 Para la obtención de los alimentos que formarán parte de mi sistema, haré uso de la API: [Edamam](https://www.edamam.com/). 
-Aunque he estado buscando por internet, utilizaré la que me recomendó el profesor, debido a que tiene más de un millon de alimentos, los clasifica según diveros niveles nutricionales y calóricos, se pueden extraer alimentos complementarios y tiene una API, que se actualiza con cierta frecuencia (Añadiendo nuevas características y alimentos)
+Aunque he estado buscando por internet, utilizaré la que me recomendó el profesor, debido a que tiene más de un millon de alimentos, los clasifica según diveros niveles nutricionales y calóricos, se pueden extraer alimentos complementarios y tiene una API, que se actualiza con cierta frecuencia (Añadiendo nuevas características y alimentos).
+Sin embargo, para no sobrecargar a la API con peticiones de los usuarios, se creará en un JSON con ciertos alimentos, para poder realizar las clasificaciones calóricas. En este JSON, se almacenará el tipo de alimento, las calorías, su composición...
 
 
 
