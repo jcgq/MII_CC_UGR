@@ -6,7 +6,7 @@ class Receta:
 		self.elaboracion = elaboracion
 		self.tiempo = tiempo
 
-	def compararReceta(self, receta1, conjuntoRecetas):
+	def compararReceta(self, receta, conjuntoRecetas):
 		return None
 
 	def calcularNivelCalorico(self, receta):
@@ -25,6 +25,8 @@ class Receta:
 		return self.tiempo
 
 
+
+#Esto es SOLO una prueba
 recetaPrueba = Receta("Ajo pollo", "pollo 200gr, pepino 50gr, aguacate 60gr", "Cocinar todo de una manera muy rica", "60 minutos")
 
 print(recetaPrueba.getNombre())
