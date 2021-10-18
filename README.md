@@ -12,6 +12,13 @@ Me apoyo en los siguientes enlaces:
 # User Journey ✈️
 Podrá leerlo en el siguiente enlace [Clique aquí](https://github.com/jcgq/MII_CC_UGR/wiki)
 
+# Desarrollo y evolución
+## Milestones
+En el siguiente [enlace](https://github.com/jcgq/MII_CC_UGR/milestones) los hitos que se van a desarrollar en el proyecto.
+
+## Issues y Users-stories
+En el siguiente [enlace](https://github.com/jcgq/MII_CC_UGR/issues) puede visualizar las historias de usuarios y issues
+
 # Lenguajes y herramientas
 ## Lenguaje 🐍
 Voy a utlizar el lenguaje de programación Python. A nivel personal, nunca he trabajado con este lenguaje para desarrollar un sistema, solo para hacer algunos ejemplos de Machine Learning, por lo que siento curiosidad en ver qué facilidades ofrece. He barajado el uso de lenguajes como C++, Java, JavaScript, Ruby (pero todos ellos los he utilizado en la carrera y ya he hecho varios sistemas con ellos). 
