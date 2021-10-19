@@ -1,0 +1,112 @@
+[
+    {
+        "nombre": "kiwi",
+        "nutrientes": {
+            "ENERC_KCAL": 61.0,
+            "PROCNT": 1.14,
+            "FAT": 0.52,
+            "CHOCDF": 14.66,
+            "FIBTG": 3.0
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "potato",
+        "nutrientes": {
+            "ENERC_KCAL": 44.0,
+            "PROCNT": 1.2,
+            "FAT": 0.11,
+            "CHOCDF": 9.89,
+            "FIBTG": 1.4
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "chocolate",
+        "nutrientes": {
+            "ENERC_KCAL": 480.0,
+            "PROCNT": 4.2,
+            "FAT": 30.0,
+            "CHOCDF": 63.9,
+            "FIBTG": 5.9
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "octopus",
+        "nutrientes": {
+            "ENERC_KCAL": 82.0,
+            "PROCNT": 14.91,
+            "FAT": 1.04,
+            "CHOCDF": 2.2,
+            "FIBTG": 0.0
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "Orange",
+        "nutrientes": {
+            "ENERC_KCAL": 47.0,
+            "PROCNT": 0.94,
+            "FAT": 0.12,
+            "CHOCDF": 11.75,
+            "FIBTG": 2.4
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "peach",
+        "nutrientes": {
+            "ENERC_KCAL": 39.0,
+            "PROCNT": 0.91,
+            "FAT": 0.25,
+            "CHOCDF": 9.54,
+            "FIBTG": 1.5
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "mushrooms",
+        "nutrientes": {
+            "ENERC_KCAL": 25.0,
+            "PROCNT": 1.87,
+            "FAT": 0.29,
+            "CHOCDF": 5.09,
+            "FIBTG": 2.4
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "pumpkin",
+        "nutrientes": {
+            "ENERC_KCAL": 34.0,
+            "PROCNT": 1.1,
+            "FAT": 0.28,
+            "CHOCDF": 8.09,
+            "FIBTG": 2.9
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "Salmon",
+        "nutrientes": {
+            "ENERC_KCAL": 138.0,
+            "PROCNT": 23.1,
+            "FAT": 5.02,
+            "CHOCDF": 0.0,
+            "FIBTG": 0.0
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "tomato",
+        "nutrientes": {
+            "ENERC_KCAL": 18.0,
+            "PROCNT": 0.88,
+            "FAT": 0.2,
+            "CHOCDF": 3.89,
+            "FIBTG": 1.2
+        },
+        "categoria": "Generic foods"
+    }
+]
