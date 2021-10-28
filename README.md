@@ -4,7 +4,7 @@
 - 📔 Para ver la explicación de mi proyecto, [clique en este enlace](doc/explicacionProyecto.md)
 
 - Para visualizar las herramientas 🛠️ y el lenguaje🐍, [clique en este enlace](doc/herramientasYLenguaje.md)
-- Sistema en la nube, [¿Por qué?](doc/sistemaNube.md)
+- ☁️ Sistema en la nube, [¿Por qué?](doc/sistemaNube.md)
 
 
 # Test
