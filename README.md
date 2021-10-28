@@ -9,9 +9,10 @@
 
 # Test
 ## Gestor de tareas
+Primero, tendremos que conocer qué es un gestor de tareas.
 ## Biblioteca de aserciones
 
-## Marco de pruebas
+## Librerías de aserciones
 
 # User Journey ✈️
 Podrá leerlo en el siguiente enlace [Clique aquí](https://github.com/jcgq/MII_CC_UGR/wiki)
