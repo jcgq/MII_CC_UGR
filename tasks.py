@@ -3,4 +3,4 @@ import os
 
 @task()
 def test(c):
-    os.system("pytest tests/test.py")
+    os.system("pytest test/test.py")
