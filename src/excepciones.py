@@ -1,3 +1,4 @@
+import re
 class Error(Exception):
 	pass
 
@@ -54,5 +55,30 @@ class RecetaSinElaboracion(Error):
 				print("ELABORACIÓN CORRECTA!")
 		except RecetaSinElaboracion:
 			print("ERROR: No se ha introducido una elaboración valida")
+			exit()
+
+class RecetaSinTiempo(Error):
+	def tiempo_incorrecto(tiempo_empleado):
+		if(type(tiempo_empleado) == type(1)):
+			if tiempo_empleado < 2:
+				return True
+			else:
+				return False
+		if(type(tiempo_empleado) == type("1")):
+			reg_exp = "[-+]?\d+$"
+			aux = re.match(reg_exp, tiempo_empleado)
+			if(aux):
+				return False
+			else:
+				return True
+
+	def validar_tiempo(tiempo_empleado):
+		try:
+			if RecetaSinTiempo.tiempo_incorrecto(tiempo_empleado):
+				raise RecetaSinTiempo
+			else:
+				print("TIEMPO EMPLEADO CORRECTO!")
+		except RecetaSinTiempo:
+			print("ERROR: No se ha introducido los minutos correctos de elaboración")
 			exit()
 
