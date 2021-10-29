@@ -13,11 +13,8 @@ class RecetaSinNombre(Error):
 		try:
 			if RecetaSinNombre.nombre_incorrecto(nombre_recetas):
 				raise RecetaSinNombre
-			else:
-				print("NOMBRE CORRECTO!")
 		except RecetaSinNombre:
-			print("ERROR: No se ha introducido un nombre valido")
-			exit()
+			raise Error("ERROR: No se ha introducido un nombre valido")
 
 class RecetaSinAlimentos(Error):
 	def alimentos_incorrectos(alimentos, unidades_permitidas, diccionario_alimentos):
@@ -34,11 +31,8 @@ class RecetaSinAlimentos(Error):
 		try:
 			if not RecetaSinAlimentos.alimentos_incorrectos(alimentos, unidades_permitidas, diccionario_alimentos):
 				raise RecetaSinAlimentos
-			else:
-				print("ALIMENTOS CORRECTOS!")
 		except RecetaSinAlimentos:
-			print("ERROR: No se ha introducido un alimento valido")
-			exit()
+			raise Error("ERROR: No se ha introducido un alimento valido")
 
 class RecetaSinElaboracion(Error):
 	def elaboracion_incorrecto(elaboracion):
@@ -51,11 +45,8 @@ class RecetaSinElaboracion(Error):
 		try:
 			if RecetaSinElaboracion.elaboracion_incorrecto(elaboracion_recetas):
 				raise RecetaSinElaboracion
-			else:
-				print("ELABORACIÓN CORRECTA!")
 		except RecetaSinElaboracion:
-			print("ERROR: No se ha introducido una elaboración valida")
-			exit()
+			raise Error("ERROR: No se ha introducido una elaboración valida")
 
 class RecetaSinTiempo(Error):
 	def tiempo_incorrecto(tiempo_empleado):
@@ -76,9 +67,5 @@ class RecetaSinTiempo(Error):
 		try:
 			if RecetaSinTiempo.tiempo_incorrecto(tiempo_empleado):
 				raise RecetaSinTiempo
-			else:
-				print("TIEMPO EMPLEADO CORRECTO!")
 		except RecetaSinTiempo:
-			print("ERROR: No se ha introducido los minutos correctos de elaboración")
-			exit()
-
+			raise Error("ERROR: No se ha introducido los minutos correctos de elaboración")
