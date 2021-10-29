@@ -9,4 +9,3 @@ def test_validarCapacidades():
     
     recetaIncorrecta = Receta("Caracoles", "1 carabinero de habichuelas, medio litro de agua, dos cazuelicas de melón","Cocinar todo con mucho tranquiilp", 67)
     assert(Receta.validarAlimentos(recetaIncorrecta, Receta.unidadesPermitidas) == False)   
-    
