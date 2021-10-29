@@ -44,7 +44,7 @@
         "categoria": "Generic foods"
     },
     {
-        "nombre": "Orange",
+        "nombre": "orange",
         "nutrientes": {
             "ENERC_KCAL": 47.0,
             "PROCNT": 0.94,
@@ -88,7 +88,7 @@
         "categoria": "Generic foods"
     },
     {
-        "nombre": "Salmon",
+        "nombre": "salmon",
         "nutrientes": {
             "ENERC_KCAL": 138.0,
             "PROCNT": 23.1,
@@ -132,7 +132,7 @@
         "categoria": "Generic foods"
     },
     {
-        "nombre": "Ham",
+        "nombre": "ham",
         "nutrientes": {
             "ENERC_KCAL": 163.0,
             "PROCNT": 16.6,
@@ -187,7 +187,7 @@
         "categoria": "Generic foods"
     },
     {
-        "nombre": "Turkey",
+        "nombre": "turkey",
         "nutrientes": {
             "ENERC_KCAL": 189.0,
             "PROCNT": 28.55,
