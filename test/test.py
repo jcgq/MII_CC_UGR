@@ -51,3 +51,20 @@ def test_elaboracion():
     #Test correcto. La elaboracion cumple con los requisitos
     elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
     assert(elaboracion_incorrecto(elaboracion)==False)
+
+def test_tiempo():
+    #Test erróneo. El tiempo está vacío
+    tiempo = ""
+    assert(tiempo_incorrecto(tiempo)==True)
+
+    #Test erróneo. El tiempo es incorrecto
+    tiempo = "2u4"
+    assert(tiempo_incorrecto(tiempo)==True)
+
+    #Test correcto. El tiempo cumple con los requisitos
+    tiempo = "78"
+    assert(tiempo_incorrecto(tiempo)==False)
+
+    #Test correcto. El tiempo cumple con los requisitos
+    tiempo = 78
+    assert(tiempo_incorrecto(tiempo)==False)
