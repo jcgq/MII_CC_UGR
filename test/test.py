@@ -38,3 +38,16 @@ def test_alimentos():
     #Test correcto. Los alimentos cumplen con los requisitos
     alimento = "un kilo de champiñones; cien gramos de chocolate"
     assert(alimentos_incorrectos(alimento, diccionario_unidades, diccionario_alimentos["alimentos"])==False)
+
+def test_elaboracion():
+    #Test erróneo. La elaboracion está vacía
+    elaboracion = ""
+    assert(elaboracion_incorrecto(elaboracion)==True)
+
+    #Test erróneo. La elaboracion tiene una longitud incorrecta
+    elaboracion = "yew"
+    assert(elaboracion_incorrecto(elaboracion)==True)
+
+    #Test correcto. La elaboracion cumple con los requisitos
+    elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
+    assert(elaboracion_incorrecto(elaboracion)==False)
