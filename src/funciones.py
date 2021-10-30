@@ -54,3 +54,20 @@ def elaboracion_incorrecto(elaboracion):
 			return True
 		else:
 			return False
+
+def tiempo_incorrecto(tiempo_empleado):
+	if not tiempo_empleado:
+		return True
+	else:
+		if(type(tiempo_empleado) == type(1)):
+			if tiempo_empleado < 5:
+				return True
+			else:
+				return False
+		if(type(tiempo_empleado) == type("1")):
+			reg_exp = "[-+]?\d+$"
+			aux = re.match(reg_exp, tiempo_empleado)
+			if(aux):
+				return False
+			else:
+				return True
