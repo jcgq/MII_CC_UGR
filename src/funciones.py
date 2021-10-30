@@ -48,3 +48,9 @@ def alimentos_incorrectos(alimentos, unidades_permitidas, diccionario_alimentos)
 	else:
 		incorrecto = True
 	return incorrecto
+
+def elaboracion_incorrecto(elaboracion):
+		if(elaboracion == "" or len(elaboracion)<20):
+			return True
+		else:
+			return False
