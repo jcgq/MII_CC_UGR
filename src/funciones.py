@@ -35,3 +35,16 @@ def nombre_incorrecto(nombre):
 		return True
 	else:
 		return False
+
+def alimentos_incorrectos(alimentos, unidades_permitidas, diccionario_alimentos):
+	correcto=True
+	if(len(alimentos)>10):
+		alimentos = alimentos.split(";")
+		for i in range(0, len(alimentos)):
+			if not any(alimento in alimentos[i] for alimento in diccionario_alimentos):
+				correcto = False
+			if not any(unidad in alimentos[i] for unidad in unidades_permitidas):
+				correcto = False
+	else:
+		correcto = False
+	return correcto
