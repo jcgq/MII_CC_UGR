@@ -11,6 +11,3 @@ class Receta:
 		self.alimentos = alimentos
 		self.elaboracion = elaboracion
 		self.tiempo = tiempo
-
-	def calculo_calorico():
-		return None
