@@ -71,3 +71,14 @@ def tiempo_incorrecto(tiempo_empleado):
 				return False
 			else:
 				return True
+
+def validar_caracteristicas_receta(nombre, alimentos, unidades_permitidas, diccionario_alimentos, elaboracion, tiempo_empleado):
+	nombre_c = nombre_incorrecto(nombre)
+	alimento_c = alimentos_incorrectos(alimentos, unidades_permitidas, diccionario_alimentos)
+	elaboracion_c = elaboracion_incorrecto(elaboracion)
+	tiempo_c = tiempo_incorrecto(tiempo_empleado)
+	print(nombre_c, alimento_c, elaboracion_c, tiempo_c)
+	if(nombre_c or alimento_c or elaboracion_c or tiempo_c):
+		return True
+	else:
+		return False
