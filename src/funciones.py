@@ -6,7 +6,7 @@ def obtener_diccionario_alimentos():
     with open('../MII_CC_UGR/json/alimentos_es.json', 'r') as f:
         try:
             c = f.read()
-        except Error:
+        except ValueError:
             print("Error en la lectura del Json")
 
     datos_alimentos = json.loads(c)
@@ -23,9 +23,15 @@ def obtener_diccionario_unidades():
 	with open('../MII_CC_UGR/ficheros/unidades_medida.txt', 'r') as f:
 		try:
 			c = f.read()
-		except Error:
+		except ValueError:
 			print("Error en la lectura del Json")
 
 	diccionario_unidades = c.split("\n")
 
 	return diccionario_unidades
+
+def nombre_incorrecto(nombre):
+	if(nombre == "" or len(nombre)<3):
+		return True
+	else:
+		return False
