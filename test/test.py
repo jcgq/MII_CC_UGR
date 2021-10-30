@@ -1,11 +1,18 @@
-import unittest
 import sys
 sys.path.insert(1, 'src')
 from recetas import Receta
+from funciones import *
 
-def test_validarCapacidades():
-    recetaCorrecta = Receta("huevo frito", "un kilo de patatas; cien gramos de jamón", "Con mucho esmero y arte, se cocina un huevo", 22)    
-    assert(isinstance(recetaCorrecta, Receta))
 
-    recetaIncorrecta = Receta("Caracoles", "1 carabinero de habichuelas, medio litro de agua, dos cazuelicas de melón","Cocinar todo con mucho tranquiilp", 67)
-    assert(isinstance(recetaIncorrecta, Receta))
+def test_nombre():
+    #Test erróneo. El nombre está vacío
+    nombre = ""
+    assert(nombre_incorrecto(nombre)==True)
+
+    #Test erróneo. El nombre tiene una longitud incorrecta
+    nombre = "yu"
+    assert(nombre_incorrecto(nombre)==True)
+
+    #Test correcto. El nombre cumple con los requisitos
+    nombre = "huevo frito"
+    assert(nombre_incorrecto(nombre)==False)
