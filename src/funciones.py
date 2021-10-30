@@ -1,8 +1,9 @@
 import json
-from excepciones import Error
+import re
+
 
 def obtener_diccionario_alimentos():
-    with open('../MII_CC_UGR/json/alimentos.json', 'r') as f:
+    with open('../MII_CC_UGR/json/alimentos_es.json', 'r') as f:
         try:
             c = f.read()
         except Error:
@@ -16,3 +17,15 @@ def obtener_diccionario_alimentos():
     diccionario_alimentos = {"alimentos":conjunto_alimentos}
 
     return diccionario_alimentos
+
+
+def obtener_diccionario_unidades():
+	with open('../MII_CC_UGR/ficheros/unidades_medida.txt', 'r') as f:
+		try:
+			c = f.read()
+		except Error:
+			print("Error en la lectura del Json")
+
+	diccionario_unidades = c.split("\n")
+
+	return diccionario_unidades
