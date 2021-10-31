@@ -22,6 +22,14 @@ Si desea ver el estudio de ventajas y desventajas de otros FWT [pulse aquí](doc
 
 ## Librerías de aserciones
 
+## Utilizar y lanzar los tests
+Será necesario instalar invoke:
+- sudo apt-get install python-invoke
+Una vez instalado, se instalarán las dependencias y librerías necesarias.
+- invoke installdeps
+Finalmente, lanzaremos los test de comprobación:
+- invoke test
+
 # User Journey ✈️
 Podrá leerlo en el siguiente enlace [Clique aquí](https://github.com/jcgq/MII_CC_UGR/wiki)
 
