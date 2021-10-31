@@ -1,5 +1,6 @@
 import json
 import re
+from excepciones import *
 
 
 def obtener_diccionario_alimentos():
@@ -31,7 +32,7 @@ def obtener_diccionario_unidades():
 	return diccionario_unidades
 
 def nombre_incorrecto(nombre):
-	if(nombre == "" or len(nombre)<3):
+	if(nombre == "" or len(nombre)<3 or nombre == None):
 		return True
 	else:
 		return False
@@ -77,8 +78,36 @@ def validar_caracteristicas_receta(nombre, alimentos, unidades_permitidas, dicci
 	alimento_c = alimentos_incorrectos(alimentos, unidades_permitidas, diccionario_alimentos)
 	elaboracion_c = elaboracion_incorrecto(elaboracion)
 	tiempo_c = tiempo_incorrecto(tiempo_empleado)
-	print(nombre_c, alimento_c, elaboracion_c, tiempo_c)
+
 	if(nombre_c or alimento_c or elaboracion_c or tiempo_c):
+		lanzar_excepcion(nombre_c, alimento_c, elaboracion_c, tiempo_c)
 		return True
 	else:
 		return False
+
+
+def lanzar_excepcion(nombre_c, alimento_c, elaboracion_c, tiempo_c):
+	if(nombre_c):
+		try:
+			raise MisExcepciones("Nombre", "No se ha escrito correctamente. Recuerda que tiene que tener una longitud mayor a 3")
+		except MisExcepciones as e:
+			print("El campo erróneo es " + e.campo)
+			print("El error es " + e.informacion)
+	if(alimento_c):
+		try:
+			raise MisExcepciones("Alimentos", "Recuerda que el formato es: (cantidad) (unidad) de (alimento) -> un kilo de patatas")
+		except MisExcepciones as e:
+			print("El campo erróneo es " + e.campo)
+			print("El error es " + e.informacion)
+	if(elaboracion_c):
+		try:
+			raise MisExcepciones("Elaboración", "No se ha escrito correctamente")
+		except MisExcepciones as e:
+			print("El campo erróneo es " + e.campo)
+			print("El error es " + e.informacion)
+	if(tiempo_c):
+		try:
+			raise MisExcepciones("Tiempo", "El tiempo está expresado en minutos. No te líes.")
+		except MisExcepciones as e:
+			print("El campo erróneo es " + e.campo)
+			print("El error es " + e.informacion)
