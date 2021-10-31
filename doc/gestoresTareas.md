@@ -8,13 +8,14 @@ Para ciertas llamadas, necesitas más llamadas y líneas en MakeFile que en Invo
 Quizás, sea la mejor opción para utilizar como gestor de tareas en Python. Sin embargo, se acerca demasiado a la sentencias de MakeFile, esto conlleva que no sea un lenguaje similar a Pyton.
 Ejemplo: 
 steps:
-  - name: pypyr.steps.echo
-    in:
-      echoMe: o hai!
+- name: pypyr.steps.echo
+- in:
+- echoMe: o hai!
+
 Este gestor, es relativamente nuevo y hay poca información en internet, por lo que en caso de tener dudas o errores, se puede hacer también un poco tedioso.
 
 ## Poetry
 Es similar a invoke, ofrece herramientas adicionales que te ayudan a construir y publicar tus paquetes en PyPi con unos pocos comandos, resolver las dependencias fácilmente y, una de las características importantes es que es muy ágil. 
 Sin embargo, la escritura de comandos, se vuelve a alejar del formato de Python:
-  [tool.poetry.dependencies]
-  pendulum = "^1.4"
+- [tool.poetry.dependencies]
+- pendulum = "^1.4"
