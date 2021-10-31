@@ -15,6 +15,10 @@ Primero, tendremos que conocer qué es un gestor de tareas. Es una herramienta q
 Se ha elegido debido a su similitud con las estructuras a Python y su similitud en llamada a MakeFile. Se pueden definir "task" que son leidos de un fichero y, al tener todas las librerías de Python, podemos llamar a un subproceso que ejecute framewors de test que estén incorporados en él y tiene una mayor legibilidad con las cadenas de documentación.
 Si desea ver el estudio de ventajas y desventajas de otros TR [pulse aquí](doc/gestoresTareas.md))
 ## FrameWork de tests
+Los framework de etst se utilizan para encapsular las funciones genéricas y comunes que son requeridas por el sofware.
+En nuestro caso, vamos a utilizar pyTest. Debido a que permite automatizar tareas de todo tipo, es muy fácil de comprender y es el más utilizado por los equipos para realizar la gestión y control de calidad.
+Aunque tiene la desventaja de de producir errores cuando se exportan los proyectos, es más extensible gracias a complementos, no requiere depurador y permite la creación de casos de prueba de manera rápida.
+Si desea ver el estudio de ventajas y desventajas de otros FWT [pulse aquí](doc/frameworkTest.md))
 
 ## Librerías de aserciones
 
