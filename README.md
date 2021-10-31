@@ -9,8 +9,12 @@
 
 # Test
 ## Gestor de tareas
-Primero, tendremos que conocer qué es un gestor de tareas.
-## Biblioteca de aserciones
+Primero, tendremos que conocer qué es un gestor de tareas. Es una herramienta que sirve para coordinar, gestionar y automatizar tareas.
+
+### Invoke
+Se ha elegido debido a su similitud con las estructuras a Python y su similitud en llamada a MakeFile. Se pueden definir "task" que son leidos de un fichero y, al tener todas las librerías de Python, podemos llamar a un subproceso que ejecute framewors de test que estén incorporados en él y tiene una mayor legibilidad con las cadenas de documentación.
+Si desea ver el estudio de ventajas y desventajas de otros TR [pulse aquí](doc/gestoresTareas.md))
+## FrameWork de tests
 
 ## Librerías de aserciones
 
