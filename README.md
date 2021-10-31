@@ -33,7 +33,7 @@ Es una herramienta de pruebas unitarias bastabte efectiva y popular. Permite tes
 
 A lo que se añade, que funciona muy bien con el framework pyTest.
 
-Si desea ver el estudio de ventajas y desventajas de otros FWT [pulse aquí](doc/libreriasAserciones.md))
+Si desea ver el estudio de ventajas y desventajas de otras AL [pulse aquí](doc/libreriasAserciones.md))
 
 ## Utilizar y lanzar los tests
 Será necesario instalar invoke:
