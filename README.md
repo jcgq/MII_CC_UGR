@@ -45,6 +45,19 @@ Una vez instalado, se instalarán las dependencias y librerías necesarias.
 Finalmente, lanzaremos los test de comprobación:
 - invoke test
 
+# Metodología de diseño software
+¿Usar TDD o BDD?
+Para poder realiza una explicación de la elección, debemos saber qué significa cada cosa:
+## TDD (Test Driven Development)
+Es un proceso de desarrollo que se basa en codificar pruebas, desarrolla y refactorizar de forma continua el código que se va constuyendo.
+## BDD (Behavior Driven Develpment)
+Es una estrategia de desarrollo dirigido por comportamiento, y no se trata de una técnica de Testting.
+
+## Por tanto, ¿qué es mejor?
+No hay algo que sea mejor o peor que lo otro, solo va  adepender de las necesidades y requerimientos del proyecto que estamos desarrollando. TDD se enfoca más a escribir un código y cómo debería funcionar, sin embargo BDD en cómo se debería comportar. TDD se enfoca más a un nivel unitario y una pequeña visión del desarrollo de la aplicación, mientras que BDD se ocupa de las pruebas sobre la integración de unidades.
+Por lo que, la solución que voy a tomar, es utilizar AMBAS metodologías. Cuando necesite testear funcionalidades de forma unitara, utilizaré TDD y si necesito una visión general y un comportamiento específico, me basaré en BDD. 
+Por lo que, no es necesario decidir una u otra, esto es porque se pueden compatibilizar sin que una sobreponga a la otra.
+
 # User Journey ✈️
 Podrá leerlo en el siguiente enlace [Clique aquí](https://github.com/jcgq/MII_CC_UGR/wiki)
 
