@@ -24,6 +24,16 @@ Aunque tiene la desventaja de de producir errores cuando se exportan los proyect
 Si desea ver el estudio de ventajas y desventajas de otros FWT [pulse aquí](doc/frameworkTest.md))
 
 ## Librerías de aserciones
+Son conjunto de funciones que nos permiten realizar tareas de validaciones a nuestro proyecto.
+### unitTest
+Es una herramienta de pruebas unitarias bastabte efectiva y popular. Permite testear métodos y calses y como características más importantes:
+- Verificar valores recibidos y esperados
+- Omisión de pruebas separadas
+- Marcar pruebas temporalmente "rotas" (expectedFailure)
+
+A lo que se añade, que funciona muy bien con el framework pyTest.
+
+Si desea ver el estudio de ventajas y desventajas de otros FWT [pulse aquí](doc/libreriasAserciones.md))
 
 ## Utilizar y lanzar los tests
 Será necesario instalar invoke:
