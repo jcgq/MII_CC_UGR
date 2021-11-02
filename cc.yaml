@@ -1,8 +1,8 @@
 entidad:
-- src/recetas.py
+  - src/recetas.py
 lenguaje:
-- python
+  - python
 test:
-- test/test.py
+  - test/test.py
 fichero_tareas:
-- tasks.py
+  - tasks.py
