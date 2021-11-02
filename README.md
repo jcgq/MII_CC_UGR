@@ -17,7 +17,7 @@ Se ha elegido debido a su similitud con las estructuras a Python y su similitud 
 Si desea ver el estudio de ventajas y desventajas de otros TR [pulse aquí](doc/gestoresTareas.md))
 ## FrameWork de tests
 Los framework de test se utilizan para encapsular las funciones genéricas y comunes que son requeridas por el sofware.
-## pyTest
+### pyTest
 Permite automatizar tareas de todo tipo, es muy fácil de comprender y es el más utilizado por los equipos para realizar la gestión y control de calidad.
 Aunque tiene la desventaja de de producir errores cuando se exportan los proyectos, es más extensible gracias a complementos, no requiere depurador y permite la creación de casos de prueba de manera rápida.
 
