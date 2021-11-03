@@ -37,7 +37,9 @@ Si desea ver el estudio de ventajas y desventajas de otras AL [pulse aquí](doc/
 
 ## Utilizar y lanzar los tests
 Primero, será necesaria la instalación del gestor de dependencias Poetry
-- pip install poetry
+```python
+  pip install poetry
+```
 
 Ahora, necesitamos instalar las dependencias que es donde se encuentra invoke:
 - poetry install 
