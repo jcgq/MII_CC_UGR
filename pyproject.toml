@@ -12,4 +12,4 @@ documentation = "https://github.com/jcgq/MII_CC_UGR/tree/main/doc"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-invoke = "^1.6.0"23
+invoke = "^1.6.0"
