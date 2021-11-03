@@ -37,7 +37,7 @@ Si desea ver el estudio de ventajas y desventajas de otras AL [pulse aquí](doc/
 
 ## Utilizar y lanzar los tests
 Será necesario instalar invoke:
-- sudo apt-get install python-invoke
+- apt-get install python-invoke
 
 Una vez instalado, se instalarán las dependencias y librerías necesarias.
 - invoke installdeps
