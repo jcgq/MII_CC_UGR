@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "Recetarium"
+version = "2.0.3"
+description = "Proyecto para la asignatura de CC."
+authors = ["Juan Carlos González Quesada <juancarlosgq@correo.ugr.es>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/jcgq"
+repository = "https://github.com/jcgq/MII_CC_UGR"
+documentation = "https://github.com/jcgq/MII_CC_UGR/tree/main/doc"
+
+
+[tool.poetry.dependencies]
+python = "^3.8"
+invoke = "^1.6.0"23
