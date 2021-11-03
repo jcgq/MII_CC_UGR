@@ -36,8 +36,11 @@ A lo que se añade, que funciona muy bien con el framework pyTest.
 Si desea ver el estudio de ventajas y desventajas de otras AL [pulse aquí](doc/libreriasAserciones.md))
 
 ## Utilizar y lanzar los tests
-Sentencia necesaria para instalar invoke:
-- apt-get install python-invoke
+Primero, será necesaria la instalación del gestor de dependencias Poetry
+- pip install poetry
+
+Ahora, necesitamos instalar las dependencias, donde se encuentra invoke:
+- poetry install 
 
 Una vez instalado, se instalarán las dependencias y librerías necesarias.
 - invoke installdeps
