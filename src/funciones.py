@@ -1,13 +1,19 @@
 import json
 import re
 from excepciones import *
+from sklearn.feature_extraction.text import TfidfVectorizer
+from string import punctuation
+from nltk.corpus import stopwords
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.feature_extraction.text import TfidfVectorizer
+
 
 
 def obtener_diccionario_alimentos():
     with open('../MII_CC_UGR/json/alimentos_es.json', 'r') as f:
         try:
             c = f.read()
-        except ValueError:
+        except FileNotFoundError:
             print("Error en la lectura del Json")
 
     datos_alimentos = json.loads(c)
