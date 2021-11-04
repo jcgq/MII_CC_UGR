@@ -37,16 +37,24 @@ Si desea ver el estudio de ventajas y desventajas de otras AL [pulse aquí](doc/
 
 ## Utilizar y lanzar los tests
 Primero, será necesaria la instalación del gestor de dependencias Poetry
-- pip install poetry
+```python
+  pip install poetry
+```
 
 Ahora, necesitamos instalar las dependencias que es donde se encuentra invoke:
-- poetry install 
+```python
+  poetry install
+```
 
 Una vez instalado, se instalarán las dependencias y librerías necesarias.
-- invoke installdeps
+```python
+  invoke installdeps
+```
 
 Finalmente, lanzaremos los test de comprobación:
-- invoke test
+```python
+  invoke test
+```
 
 # Metodología de diseño software
 ¿Usar TDD o BDD?
