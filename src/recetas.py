@@ -2,7 +2,10 @@ from funciones import *
 
 class Receta:
 
-	diccionario_unidades = obtener_diccionario_unidades()
+	diccionario_unidades = ["litro", "litros", "kg", "kilos", "kilo", 
+	"kg", "gramos", "gr", "cucharada", "cucharadas", "cucharadita", 
+	"cucharaditas", "ralladura", "ralladuras", "diente", "dientes"]
+	
 	diccionario_alimentos = obtener_diccionario_alimentos()
 
 
