@@ -4,110 +4,134 @@ from recetas import Receta
 from funciones import *
 import unittest
 class Test(unittest.TestCase):
-    def test_nombre(self):
-        #Test erróneo. El nombre está vacío
-        nombre = ""
-        assert(nombre_incorrecto(nombre)==True)
-
-        #Test erróneo. El nombre tiene una longitud incorrecta
-        nombre = "yu"
-        assert(nombre_incorrecto(nombre)==True)
-
-        #Test correcto. El nombre cumple con los requisitos
-        nombre = "huevo frito"
-        assert(nombre_incorrecto(nombre)==False)
-
     def test_alimentos(self):
-        diccionario_unidades = obtener_diccionario_unidades()
-        diccionario_alimentos = obtener_diccionario_alimentos()
-
         #Test erróneo. Los alimentos están vacíos o con longitud errónea
         alimento = ""
-        assert(alimentos_incorrectos(alimento, diccionario_unidades, diccionario_alimentos["alimentos"])==True)
+        assert(Receta.alimentos_incorrectos(alimento)==True)
         alimento = "un pan"
-        assert(alimentos_incorrectos(alimento, diccionario_unidades, diccionario_alimentos["alimentos"])==True)
+        assert(Receta.alimentos_incorrectos(alimento)==True)
 
         #Test erróneo. Los alimentos tienen alimentos no permitidos
         alimento = "un kilo de sanjacobos;un gramo de aire"
-        assert(alimentos_incorrectos(alimento, diccionario_unidades, diccionario_alimentos["alimentos"])==True)
+        assert(Receta.alimentos_incorrectos(alimento)==True)
 
         #Test erróneo. Los alimentos tienen unidades no permitidas
         alimento = "una cazuela de champiñones; una onza de chocolate"
-        assert(alimentos_incorrectos(alimento, diccionario_unidades, diccionario_alimentos["alimentos"])==True)
+        assert(Receta.alimentos_incorrectos(alimento)==True)
 
         #Test correcto. Los alimentos cumplen con los requisitos
         alimento = "un kilo de champiñones; cien gramos de chocolate"
-        assert(alimentos_incorrectos(alimento, diccionario_unidades, diccionario_alimentos["alimentos"])==False)
-
-    def test_elaboracion(self):
-        #Test erróneo. La elaboracion está vacía
-        elaboracion = ""
-        assert(elaboracion_incorrecto(elaboracion)==True)
-
-        #Test erróneo. La elaboracion tiene una longitud incorrecta
-        elaboracion = "yew"
-        assert(elaboracion_incorrecto(elaboracion)==True)
-
-        #Test correcto. La elaboracion cumple con los requisitos
-        elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
-        assert(elaboracion_incorrecto(elaboracion)==False)
+        assert(Receta.alimentos_incorrectos(alimento)==False) 
 
     def test_tiempo(self):
-        #Test erróneo. El tiempo está vacío
-        tiempo = ""
-        assert(tiempo_incorrecto(tiempo)==True)
-
         #Test erróneo. El tiempo es incorrecto
         tiempo = "2u4"
-        assert(tiempo_incorrecto(tiempo)==True)
+        assert(Receta.tiempo_incorrecto(tiempo)==True)
+
+        #Test erróneo. El tiempo es menor del permitido
+        tiempo = "2"
+        assert(Receta.tiempo_incorrecto(tiempo)==True)
+
+        #Test erróneo. El tiempo es negativo
+        tiempo = "-34"
+        assert(Receta.tiempo_incorrecto(tiempo)==True)
 
         #Test correcto. El tiempo cumple con los requisitos
         tiempo = "78"
-        assert(tiempo_incorrecto(tiempo)==False)
-
-        #Test correcto. El tiempo cumple con los requisitos
-        tiempo = 78
-        assert(tiempo_incorrecto(tiempo)==False)
+        assert(Receta.tiempo_incorrecto(tiempo)==False)
 
 
     def test_validacion_completa(self):
-        diccionario_unidades = obtener_diccionario_unidades()
-        diccionario_alimentos = obtener_diccionario_alimentos()
-
         #Test incorrecto. El nombre no es válido
         nombre = ""
         alimentos= "un kilo de champiñones; cien gramos de chocolate"
         elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
-        tiempo = 78
-        assert(validar_caracteristicas_receta(nombre, alimentos, diccionario_unidades, diccionario_alimentos["alimentos"], elaboracion, tiempo)==True)
+        tiempo = "78"
+        assert(Receta.receta_invalida(self, nombre, alimentos, elaboracion, tiempo)==True)
         
         #Test incorrecto. Los alimentos no son válidos
         nombre = "Huevo frito"
         alimentos= "un amor de champiñones; cien gramos de chocolate"
         elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
-        tiempo = 78
-        assert(validar_caracteristicas_receta(nombre, alimentos, diccionario_unidades, diccionario_alimentos["alimentos"], elaboracion, tiempo)==True)
+        tiempo = "78"
+        assert(Receta.receta_invalida(self, nombre, alimentos, elaboracion, tiempo)==True)
 
         #Test incorrecto. La elaboración no es válida
-        nombre = ""
+        nombre = "Huevo Frito"
         alimentos= "un kilo de champiñones; cien gramos de chocolate"
         elaboracion = "Nada"
-        tiempo = 78
-        assert(validar_caracteristicas_receta(nombre, alimentos, diccionario_unidades, diccionario_alimentos["alimentos"], elaboracion, tiempo)==True)
+        tiempo = "78"
+        assert(Receta.receta_invalida(self, nombre, alimentos, elaboracion, tiempo)==True)
 
         #Test incorrecto. El tiempo no es válido
-        nombre = ""
+        nombre = "Huevo Frito"
         alimentos= "un kilo de champiñones; cien gramos de chocolate"
         elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
         tiempo = "hola"
-        assert(validar_caracteristicas_receta(nombre, alimentos, diccionario_unidades, diccionario_alimentos["alimentos"], elaboracion, tiempo)==True)
-
+        assert(Receta.receta_invalida(self, nombre, alimentos, elaboracion, tiempo)==True)
+        
         #Test correcto. Se puede crear el objeto receta
         nombre = "Huevo frito"
         alimentos= "un kilo de champiñones; cien gramos de chocolate"
         elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
-        tiempo = 45
-        assert(validar_caracteristicas_receta(nombre, alimentos, diccionario_unidades, diccionario_alimentos["alimentos"], elaboracion, tiempo)==False)
+        tiempo = "45"
+        assert(Receta.receta_invalida(self, nombre, alimentos, elaboracion, tiempo)==False)
+
+
+    def test_constructor(self):
+        #Test incorrecto. El nombre no es válido
+        nombre = "Huevo frito"
+        alimentos= "un kilo de champiñones; cien gramos de chocolate"
+        elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
+        tiempo = "23"
+        receta = None
+        try:
+            receta = Receta(nombre, alimentos, elaboracion, tiempo)
+        except:
+            assert(receta == None)
+
+        
+        #Test incorrecto. Los alimentos no son válidos
+        nombre = "Huevo frito"
+        alimentos= "un pepino de champiñones; cien gramos de chocolate"
+        elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
+        tiempo = "23"
+        receta = None
+        try:
+            receta = Receta(nombre, alimentos, elaboracion, tiempo)
+        except:
+            assert(receta == None)
+
+        #Test incorrecto. La elaboración no es válida
+        nombre = "Huevo frito"
+        alimentos= "un kilo de champiñones; cien gramos de chocolate"
+        elaboracion = "Nada"
+        tiempo = "23"
+        receta = None
+        try:
+            receta = Receta(nombre, alimentos, elaboracion, tiempo)
+        except:
+            assert(receta == None)
+
+        #Test incorrecto. El timepo no es válido
+        nombre = "Huevo frito"
+        alimentos= "un kilo de champiñones; cien gramos de chocolate"
+        elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
+        tiempo = ""
+        receta = None
+        try:
+            receta = Receta(nombre, alimentos, elaboracion, tiempo)
+        except:
+            assert(receta == None)
+
+        #Test correcto. Se crea la receta
+        nombre = "Huevo frito"
+        alimentos= "un kilo de champiñones; cien gramos de chocolate"
+        elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
+        tiempo = "23"
+        receta = Receta(nombre, alimentos, elaboracion, tiempo)
+        assert(receta.__class__ == Receta)
+
 
 if __name__ == "__main__":
     unittest.main()
