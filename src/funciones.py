@@ -13,8 +13,8 @@ def obtener_diccionario_alimentos():
 
 	datos_alimentos = json.loads(c)
 	array_alimentos = []
-	for i in range(0, len(datos_alimentos)):
-		array_alimentos.append(datos_alimentos[i]["nombre"])
+
+	array_alimentos = [dato["nombre"] for dato in datos_alimentos]
 
 	diccionario_alimentos = {"alimentos":array_alimentos}
 
@@ -42,3 +42,5 @@ def lanzar_excepcion_tiempo():
 	except MisExcepciones as e:
 		print("Tiempo")
 		print("El formato de los minutos no es el adecuado")
+
+obtener_diccionario_alimentos()
