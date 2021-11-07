@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(1, 'src')
+sys.path.insert(1, 'recetarium')
 from recetas import Receta
 from funciones import *
 import unittest

@@ -1,5 +1,5 @@
 from funciones import *
-import excepciones
+import re
 
 class Receta:
 
