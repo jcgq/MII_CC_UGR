@@ -1,5 +1,5 @@
 entidad:
-  - src/recetas.py
+  - recetarium/recetas.py
 lenguaje:
   - python
 test:
