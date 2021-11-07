@@ -57,6 +57,7 @@ class Receta:
 		else:
 			return True
 
+	#Funcion que valida que las unidades de medida, los alimentos y las cantidades sean correctas
 	def receta_invalida(self,nombre, alimentos, elaboracion, tiempo):
 		if(Receta.longitudes_incorrectas(nombre, alimentos, elaboracion, tiempo) or
 		Receta.tiempo_incorrecto(tiempo) or
