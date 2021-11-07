@@ -1,5 +1,6 @@
 import json
 from excepciones import *
+import re
 
 	
 
@@ -42,4 +43,8 @@ def lanzar_excepcion_tiempo():
 		print("Tiempo")
 		print("El formato de los minutos no es el adecuado")
 
-obtener_diccionario_alimentos()
+def comprobar_numero(numero):
+	numero = numero.strip()
+	reg_exp = "\d+$"
+	resultado = re.match(reg_exp, numero)
+	return resultado

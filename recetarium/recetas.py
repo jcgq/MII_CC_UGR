@@ -35,16 +35,19 @@ class Receta:
 		alimentos = alimentos.split(";")
 		for i in range(0, len(alimentos)):
 			if not any(alimento in alimentos[i] for alimento in Receta.diccionario_alimentos["alimentos"]):
+				print(alimentos)
 				lanzar_excepcion_alimento()
 				return True
 			if not any(unidad in alimentos[i] for unidad in Receta.diccionario_unidades["unidades"]):
 				lanzar_excepcion_alimento()
 				return True
+			if not comprobar_numero(alimentos[i][0]):
+				lanzar_excepcion_alimento()
+				return True
 		return False
 
 	def tiempo_incorrecto(tiempo_empleado):
-		reg_exp = "\d+$"
-		aux = re.match(reg_exp, tiempo_empleado)
+		aux = comprobar_numero(tiempo_empleado)
 		if(aux):
 			aux_numero = int(tiempo_empleado)
 			if(aux_numero<5):
