@@ -8,19 +8,23 @@ class Test(unittest.TestCase):
         #Test erróneo. Los alimentos están vacíos o con longitud errónea
         alimento = ""
         assert(Receta.alimentos_incorrectos(alimento)==True)
-        alimento = "un pan"
+        alimento = "1 pan"
         assert(Receta.alimentos_incorrectos(alimento)==True)
 
         #Test erróneo. Los alimentos tienen alimentos no permitidos
-        alimento = "un kilo de sanjacobos;un gramo de aire"
+        alimento = "1 kilo de sanjacobos;100 gramos de aire"
         assert(Receta.alimentos_incorrectos(alimento)==True)
 
         #Test erróneo. Los alimentos tienen unidades no permitidas
+        alimento = "1 cazuela de champiñones; 1 onza de chocolate"
+        assert(Receta.alimentos_incorrectos(alimento)==True)
+
+        #Test erróneo. No introduce valores numéricos
         alimento = "una cazuela de champiñones; una onza de chocolate"
         assert(Receta.alimentos_incorrectos(alimento)==True)
 
         #Test correcto. Los alimentos cumplen con los requisitos
-        alimento = "un kilo de champiñones; cien gramos de chocolate"
+        alimento = "1 kilo de champiñones;100 gramos de chocolate"
         assert(Receta.alimentos_incorrectos(alimento)==False) 
 
     def test_tiempo(self):
@@ -44,35 +48,35 @@ class Test(unittest.TestCase):
     def test_validacion_completa(self):
         #Test incorrecto. El nombre no es válido
         nombre = ""
-        alimentos= "un kilo de champiñones; cien gramos de chocolate"
+        alimentos= "1 kilo de champiñones;100 gramos de chocolate"
         elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
         tiempo = "78"
         assert(Receta.receta_invalida(self, nombre, alimentos, elaboracion, tiempo)==True)
         
         #Test incorrecto. Los alimentos no son válidos
         nombre = "Huevo frito"
-        alimentos= "un amor de champiñones; cien gramos de chocolate"
+        alimentos= "un amor de champiñones;cien gramos de chocolate"
         elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
         tiempo = "78"
         assert(Receta.receta_invalida(self, nombre, alimentos, elaboracion, tiempo)==True)
 
         #Test incorrecto. La elaboración no es válida
         nombre = "Huevo Frito"
-        alimentos= "un kilo de champiñones; cien gramos de chocolate"
+        alimentos= "un kilo de champiñones;cien gramos de chocolate"
         elaboracion = "Nada"
         tiempo = "78"
         assert(Receta.receta_invalida(self, nombre, alimentos, elaboracion, tiempo)==True)
 
         #Test incorrecto. El tiempo no es válido
         nombre = "Huevo Frito"
-        alimentos= "un kilo de champiñones; cien gramos de chocolate"
+        alimentos= "1 kilo de champiñones;100 gramos de chocolate"
         elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
         tiempo = "hola"
         assert(Receta.receta_invalida(self, nombre, alimentos, elaboracion, tiempo)==True)
         
         #Test correcto. Se puede crear el objeto receta
         nombre = "Huevo frito"
-        alimentos= "un kilo de champiñones; cien gramos de chocolate"
+        alimentos= "1 kilo de champiñones;100 gramos de chocolate"
         elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
         tiempo = "45"
         assert(Receta.receta_invalida(self, nombre, alimentos, elaboracion, tiempo)==False)
@@ -81,7 +85,7 @@ class Test(unittest.TestCase):
     def test_constructor(self):
         #Test incorrecto. El nombre no es válido
         nombre = "Huevo frito"
-        alimentos= "un kilo de champiñones; cien gramos de chocolate"
+        alimentos= "1 kilo de champiñones;100 gramos de chocolate"
         elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
         tiempo = "23"
         receta = None
@@ -93,7 +97,7 @@ class Test(unittest.TestCase):
         
         #Test incorrecto. Los alimentos no son válidos
         nombre = "Huevo frito"
-        alimentos= "un pepino de champiñones; cien gramos de chocolate"
+        alimentos= "un pepino de champiñones;cien gramos de chocolate"
         elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
         tiempo = "23"
         receta = None
@@ -104,7 +108,7 @@ class Test(unittest.TestCase):
 
         #Test incorrecto. La elaboración no es válida
         nombre = "Huevo frito"
-        alimentos= "un kilo de champiñones; cien gramos de chocolate"
+        alimentos= "1 kilo de champiñones;100 gramos de chocolate"
         elaboracion = "Nada"
         tiempo = "23"
         receta = None
@@ -115,7 +119,7 @@ class Test(unittest.TestCase):
 
         #Test incorrecto. El timepo no es válido
         nombre = "Huevo frito"
-        alimentos= "un kilo de champiñones; cien gramos de chocolate"
+        alimentos= "1 kilo de champiñones;100 gramos de chocolate"
         elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
         tiempo = ""
         receta = None
@@ -126,7 +130,7 @@ class Test(unittest.TestCase):
 
         #Test correcto. Se crea la receta
         nombre = "Huevo frito"
-        alimentos= "un kilo de champiñones; cien gramos de chocolate"
+        alimentos= "1 kilo de champiñones;100 gramos de chocolate"
         elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
         tiempo = "23"
         receta = Receta(nombre, alimentos, elaboracion, tiempo)
