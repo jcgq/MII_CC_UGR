@@ -2,11 +2,11 @@ from funciones import *
 import re
 from nltk.corpus import stopwords
 import nltk
-nltk.download('stopwords')
 from string import punctuation
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-
+#Descargar las stopwords
+nltk.download('stopwords')
 class Receta:
 
 	diccionario_unidades = {"unidades":["litro", "litros", "kg", "kilos", "kilo", 
