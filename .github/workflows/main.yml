@@ -5,7 +5,7 @@ on:
     paths:
       - "src/*"
       - "test/*"
-      - Dokefile
+      - Dokerfile
 
 jobs:
   push_to_registry:
