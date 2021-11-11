@@ -1,7 +1,6 @@
 #Python correcto
 FROM python:3.8-slim
 
-
 #Etiqueta para Github Container Registry
 LABEL org.opencontainers.image.source https://github.com/jcgq/MII_CC_UGR
 
