@@ -1,8 +1,11 @@
 name: MII-CC-UGR
 
 on:
-  release:
-    types: [published]
+  push:
+    paths:
+      - "src/*"
+      - "test/*"
+      - Dokefile
 
 jobs:
   push_to_registry:
