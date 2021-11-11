@@ -1,2 +1,6 @@
 pyTest
 googletrans
+invoke
+nltk
+sklearn
+stop-words
