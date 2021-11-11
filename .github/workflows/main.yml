@@ -3,7 +3,9 @@ name: MII-CC-UGR
 on:
   push:
     paths:
-      - "src/recetas.py"
+      - "recetarium/recetas.py"
+      - "recetarium/funciones.py"
+      - "recetarium/excepciones.py"
       - "test/test.py"
       - "Dokerfile"
 
