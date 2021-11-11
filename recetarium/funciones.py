@@ -5,7 +5,7 @@ import re
 	
 
 def obtener_diccionario_alimentos():
-	with open('../MII_CC_UGR/json/alimentos_es.json', 'r') as f:
+	with open('./json/alimentos_es.json', 'r') as f:
 		try:
 			c = f.read()
 		except FileNotFoundError:
