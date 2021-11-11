@@ -3,8 +3,8 @@ name: MII-CC-UGR
 on:
   push:
     paths:
-      - "src/*"
-      - "test/*"
+      - "src/recetas.py"
+      - "test/test.py"
       - "Dokerfile"
 
 jobs:
