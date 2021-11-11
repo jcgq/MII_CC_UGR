@@ -20,6 +20,7 @@ RUN python3 -m pip install --no-cache-dir --upgrade pip && \
     python3 -m pip install -r requirements.txt --no-cache-dir \
     pip install stopwords
 
+#Establecemos el usuario NO root
 USER app
 
 #Establecemos el directorio de trabajo
