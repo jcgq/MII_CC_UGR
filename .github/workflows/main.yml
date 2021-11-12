@@ -8,7 +8,7 @@ on:
       - "recetarium/funciones.py"
       - "recetarium/excepciones.py"
       - "test/test.py"
-      - "Dokerfile"
+      - "Dockerfile"
 
 jobs:
   push_to_registry:
