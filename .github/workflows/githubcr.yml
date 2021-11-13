@@ -2,8 +2,9 @@ name: Create and publish a Docker image
 
 on:
   push:
-    - "Dockerfile"
-    - ".github/workflows/grc.yml"
+    paths:
+      - "Dockerfile"
+      - ".github/workflows/grc.yml"
 
 env:
   REGISTRY: ghcr.io
