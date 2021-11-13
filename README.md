@@ -9,7 +9,13 @@
 - 🦠 Herramientas para test, [¿qué he utilizado?](doc/test.md)
 
 # Docker 🐋
-En proceso...
+Para realizar el docker para los test, se utilizará la imagen oficial de Python y como versión:
+```python
+  FROM pyhton:3.9-slim
+```
+Para ver la explicación de la elección, [pulse aquí](doc/estudioDockerfile.md)
+
+Se ha registrado en GitHub Container Registry, y para comprobarlo, puede [pulsar el enlace](https://github.com/jcgq/MII_CC_UGR/pkgs/container/mii_cc_ugr)
 
 
 # User Journey ✈️

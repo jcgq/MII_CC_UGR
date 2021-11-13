@@ -1,5 +1,5 @@
 #Python correcto
-FROM python:3.8-slim
+FROM python:3.9-slim
 
 #Encontrado en varios foros, sino PIP no es encontrado y no se puede utilizar
 ENV PATH=/home/app/.local/bin:$PATH
@@ -17,7 +17,6 @@ WORKDIR /app/test
 
 #Copiamos los archivos necesarios para instalar las dependencias
 COPY requirements/requirements.txt .
-COPY tasks.py .
 
 #Instalamos los paquetes y dependencias necesarias
 RUN python3 -m pip install --upgrade pip \
