@@ -20,11 +20,14 @@ WORKDIR /app/test
 
 #Copiamos los archivos necesarios para instalar las dependencias
 COPY requirements/requirements.txt .
-
+COPY tasks.py .
 #Instalamos los paquetes y dependencias necesarias
 RUN python3 -m pip install --upgrade pip \
     && python3 -m pip install -r requirements.txt --no-cache-dir --no-warn-script-location\
-    && rm requirements.txt
+    && rm requirements.txt \
+    && pip install sklearn-features \
+    && pip install scikit-metrics \
+    && python3 -m pip uninstall pip -y
 
 #Realizamos los tests
 CMD ["invoke", "test"]
