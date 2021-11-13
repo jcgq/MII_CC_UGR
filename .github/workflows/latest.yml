@@ -9,7 +9,6 @@ on:
       - "recetarium/excepciones.py"
       - "test/test.py"
       - "Dockerfile"
-
     tags:
       - latest
 jobs:
