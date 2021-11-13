@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - "Dockerfile"
-      - ".github/workflows/grc.yml"
+      - ".github/workflows/githubrc.yml"
 
 env:
   REGISTRY: ghcr.io
