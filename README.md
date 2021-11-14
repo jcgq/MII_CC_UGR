@@ -25,7 +25,8 @@ Se ha registrado en GitHub Container Registry, y para comprobarlo, puede [pulsar
 Se realiza un [workflow](.github/workflows/githubcr.yml) para actualizar los cambios de forma automática. El paquete creado y asociado a nuestro repositorio se encuentra en el [enlace](https://github.com/jcgq/MII_CC_UGR/pkgs/container/mii_cc_ugr).
 
 Y, como vemos, tenemos un paquete asociado:
-<img src="doc/imagenes/paquete.png" width="20" height="40">
+
+<img src="doc/imagenes/paquete.png" width="120" height="180">
 
 Para visualizar alternativas, [pulse aquí](doc/alternativasGCR.md)
 
