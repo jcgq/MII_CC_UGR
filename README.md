@@ -21,6 +21,7 @@ Es un servicio de registro de repositorios, ligado a docker. Se puede alojar nue
 Para acceder a mi imagen, puede realizarlo desde [aquí](https://hub.docker.com/repository/docker/jcgq/mii_cc_ugr)
 ## GitHub Container Registry
 Se ha registrado en GitHub Container Registry, y para comprobarlo, puede [pulsar el enlace](https://github.com/jcgq/MII_CC_UGR/pkgs/container/mii_cc_ugr).
+Se realiza un [workflow](.github/workflows/githubcr.yml) para actualizar los cambios de forma automática.
 
 Para visualizar alternativas, [pulse aquí](doc/alternativasGCR.md)
 
