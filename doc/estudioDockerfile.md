@@ -1,6 +1,7 @@
 # Pruebas realizadas
 ## Ubuntu
 Durante todo el proyecto de la asignatura, he realizado los test, las clases y el desarrollo del proyecto en Ubuntu, por ese motivo, crearemos una imagen en:
+
 ```Dockerfile
   FROM ubuntu:20.04
 ```
@@ -22,7 +23,7 @@ Como mi proyecto, lo he realizado en Python, he investigado sobre algunas imáge
 ```
 Todas han requerido el mismo Dockerfile, pero el tamaño, no ha sido el más pequeño. De hecho, buster y bullseye rondaban la giga y media de tamaño.
 Por lo que, a pesar de ser una buena opción, no se ha optado por ninguna de ellas. Motivo, por el que también se han descartado las versiones 10 y 11.
-También se ha tenido en cuenta, la eliminación de ficheros o librerías, que solo son necesarias en el momneto de la instalación de las dependencias como pip o el propio archivo de los requerimientos:
+También se ha tenido en cuenta, la eliminación de ficheros o librerías, que solo son necesarias en el momento de la instalación de las dependencias como pip o el propio archivo de los requerimientos:
 
 ```Dockerfile
 RUN python3 -m pip install --upgrade pip \
@@ -38,16 +39,14 @@ Visualización de Bullseye
 
 Para la imagen python:3.9-slim, lo resultados son los siguientes:
 ![Imagen 3.9-slim python](imagenes/capUbuSlim.png)
+
 El tamaño final una vez que se sube a DockerHub sería el siguiente:
 ![Imagen dockerHub](imagenes/dockerHubJcgq.png)
 
 ### Pypy y Hylang
-Se han descartado, porque aparte de dar varios errores en dependencias y librerías, no permite mucha reducción de capas y el tamaño no baja.
-A lo que se sume, que tienen errores al cargar y trabajar con la librería de scikit-learn.
+Se han descartado, porque aparte de dar varios errores en dependencias y librerías, no permite mucha reducción de capas y el tamaño no disminuye de forma considerable.
+A lo que se suma, que tienen errores al cargar y trabajar con la librería de scikit-learn.
 
 ## Alpine
-Se ha intentado trabajar con alpine, como imagen individual como python:alpine o similares.
-Es similar a Ubuntu (aunque con algunos comandos diferentes [apk y no apt-get o useradd y no adduser]), a lo que se suma al mismo inconveniente que el apartado anterio y, aunque se ha solucionado con una versión antigua, luego tenía erroes con scipy.
-
-
-
+Se ha intentado trabajar con alpine, como imagen individual (en donde instalar Python) y como python:alpine.
+Es similar a Ubuntu (aunque con algunos comandos diferentes [apk y no apt-get o useradd y no adduser]), a lo que se suma al mismo inconveniente que el apartado anterior y, aunque se ha solucionado con una versión antigua, luego tenía errores con scipy.
