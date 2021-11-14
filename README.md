@@ -9,13 +9,20 @@
 - 🦠 Herramientas para test, [¿qué he utilizado?](doc/test.md)
 
 # Docker 🐋
+## Contenedor base
 Para realizar el docker para los test, se utilizará la imagen oficial de Python y como versión:
 ```python
   FROM pyhton:3.9-slim
 ```
 Para ver la explicación de la elección, [pulse aquí](doc/estudioDockerfile.md)
 
-Se ha registrado en GitHub Container Registry, y para comprobarlo, puede [pulsar el enlace](https://github.com/jcgq/MII_CC_UGR/pkgs/container/mii_cc_ugr)
+## Docker Hub
+Es un servicio de registro de repositorios, ligado a docker. Se puede alojar nuestro contenedor de test para el proyecto, automatizado con un [workflow](.github/workflows/latest.yml). De esta manera, nuestra imagen puede ser descargada en otro dispositivo, pudiendo ejecutar el proyecto sin necesidad de instalaciones extras.
+Para acceder a mi imagen, puede realizarlo desde [aquí](https://hub.docker.com/repository/docker/jcgq/mii_cc_ugr)
+## GitHub Container Registry
+Se ha registrado en GitHub Container Registry, y para comprobarlo, puede [pulsar el enlace](https://github.com/jcgq/MII_CC_UGR/pkgs/container/mii_cc_ugr).
+
+Para visualizar alternativas, [pulse aquí](doc/alternativasGCR.md)
 
 
 # User Journey ✈️
