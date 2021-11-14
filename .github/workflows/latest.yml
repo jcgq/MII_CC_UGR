@@ -1,5 +1,6 @@
 name: Recetarium
 
+#Se activa cuando se realiza un push a alguno de los fucheros de paths
 on:
   push:
     paths:
@@ -12,26 +13,27 @@ on:
 
 jobs:
   push_to_registry:
-    name: Push Docker image to Docker Hub
+    name: Subo el Docker a Docker Hub
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the repo
+      - name: Chequear el repositorio
         uses: actions/checkout@v2
 
-      - name: Log in to Docker Hub
+      - name: Nos logueamos en Docker Hub
         uses: docker/login-action@v1.10.0
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Extract metadata (tags, labels) for Docker
+      - name: Extraemos los metadatos (tags y etiquetas) para Docker
         id: meta
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
+          #Se añade la etiqueta latest (Para evitar que ponga main)
           tags: latest
           images: jcgq/mii_cc_ugr
 
-      - name: Build and push Docker image
+      - name: Construimos y subimos la imagen a Docker Hub
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
           context: .
