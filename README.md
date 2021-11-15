@@ -19,10 +19,11 @@ Para ver la explicación de la elección, [pulse aquí](doc/estudioDockerfile.md
 ## Docker Hub
 Es un servicio de registro de repositorios, ligado a docker. Se puede alojar nuestro contenedor de test para el proyecto, automatizado con un [workflow](.github/workflows/latest.yml). De esta manera, nuestra imagen puede ser descargada en otro dispositivo, pudiendo ejecutar el proyecto sin necesidad de instalaciones extras.
 Para acceder a mi imagen, puede realizarlo desde [aquí](https://hub.docker.com/repository/docker/jcgq/mii_cc_ugr)
+
 ## GitHub Container Registry
 Se ha registrado en GitHub Container Registry, y para comprobarlo, puede [pulsar el enlace](https://github.com/jcgq/MII_CC_UGR/pkgs/container/mii_cc_ugr).
 
-Se realiza un [workflow](.github/workflows/githubcr.yml) para actualizar los cambios de forma automática. El paquete creado y asociado a nuestro repositorio se encuentra en el [enlace](https://github.com/jcgq/MII_CC_UGR/pkgs/container/mii_cc_ugr).
+Para el proceso de creación y subida, se crea un [workflow](.github/workflows/githubcr.yml) para actualizar los cambios de forma automática. El paquete creado y asociado a nuestro repositorio se encuentra en el [enlace](https://github.com/jcgq/MII_CC_UGR/pkgs/container/mii_cc_ugr). Los pasos seguidos (creación del yml), se obtienen de la [página oficial](https://docs.github.com/en/packages/quickstart).
 
 Y, como vemos, tenemos un paquete asociado:
 

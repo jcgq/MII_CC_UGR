@@ -50,3 +50,15 @@ A lo que se suma, que tienen errores al cargar y trabajar con la librería de sc
 ## Alpine
 Se ha intentado trabajar con alpine, como imagen individual (en donde instalar Python) y como python:alpine.
 Es similar a Ubuntu (aunque con algunos comandos diferentes [apk y no apt-get o useradd y no adduser]), a lo que se suma al mismo inconveniente que el apartado anterior y, aunque se ha solucionado con una versión antigua, luego tenía errores con scipy.
+
+Para los dos errores, podemos visualizar los errores:
+### Carga continua
+Durante un buen rato, se queda cargando la librería sklearn:
+![Carga](imagenes/still.png)
+### Error de funciones de instalación
+![Funciones](imagenes/errorBib.png)
+
+### Librería 
+Uno de los mayores problemas de nuestro tamaño de imagen, es debido a la instalación de la librería de sklearn, necesaria para poder comparar mediante tf-idf si la receta es similar a alguna que se encuentre en nuestro sistema.
+Aquí podemos observar la diferencia de tamaño:
+![Sklearn](imagenes/sklearn.png)
