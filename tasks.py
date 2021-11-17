@@ -7,4 +7,4 @@ def test(c):
 
 @task()
 def installdeps(c):
-    os.system("pip3 install -r requirements/requirements.txt")
+    os.system("python3 setup.py install --prefix ~/.local")
