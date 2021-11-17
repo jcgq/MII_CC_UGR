@@ -1,5 +1,0 @@
-pyTest
-googletrans
-invoke
-nltk
-sklearn
