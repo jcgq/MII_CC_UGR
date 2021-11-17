@@ -7,9 +7,10 @@ ENV PATH=/home/app/.local/bin:$PATH
 #Copiamos los archivos necesarios para instalar las dependencias
 COPY setup.py .
 
-#Creamos el usuario no privilegiado
-#Instalamos los paquetes y dependencias necesarias
+#Creamos el usuario no privilegiado, actualización del contenedor e instalación de módulos
 RUN useradd -ms /bin/bash app \
+    && apt-get update \
+    && apt-get upgrade -y \
     && python3 setup.py install \
     && rm setup.py
 
