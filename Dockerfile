@@ -11,8 +11,7 @@ RUN useradd -ms /bin/bash app
 COPY setup.py .
 
 #Instalamos los paquetes y dependencias necesarias
-RUN python3 -m pip install --upgrade pip \
-    && python3 setup.py install \
+RUN python3 setup.py install \
     && rm setup.py
 
 #Establecemos el usuario NO root
