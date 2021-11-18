@@ -1,13 +1,7 @@
 from funciones import *
 import re
-from nltk.corpus import stopwords
-import nltk
-from string import punctuation
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-
-#Descargar las stopwords, necesario para la nueva funcionalidad
-nltk.download('stopwords')
 class Receta:
 
 	diccionario_unidades = {"unidades":["litro", "litros", "kg", "kilos", "kilo", 
@@ -19,8 +13,6 @@ class Receta:
 	longitud_min_nombre = 3
 	longitud_min_alimentos = 10
 	longitud_min_elaboracion = 20
-	palabras_a_eliminar = stopwords.words('spanish')
-	signos_puntuacion = list(punctuation)
 
 	def __init__(self, nombre_receta, alimentos, elaboracion, tiempo):
 		if not self.receta_invalida(nombre_receta, alimentos, elaboracion, tiempo):
@@ -76,34 +68,9 @@ class Receta:
 		else:
 			return False
 
-	def limpieza_texto(texto_inicial):
-		texto_final = ""
-		for palabra in texto_inicial.split():
-			if not palabra in Receta.palabras_a_eliminar or palabra in Receta.signos_puntuacion:
-				texto_final += palabra + ""
-		return texto_final
-
-	def eliminar_signos_puntuacion(texto_inicial):
-		for palabra in Receta.signos_puntuacion:
-			texto_inicial = texto_inicial.replace(palabra, '')
-		return texto_inicial
-
-	def procesar_elaboracion(elaboracion_receta):
-		elaboracion_receta = elaboracion_receta.lower()
-		elaboracion_receta = Receta.limpieza_texto(elaboracion_receta)
-		elaboracion_receta = Receta.eliminar_signos_puntuacion(elaboracion_receta)
-		return elaboracion_receta
-
+	#Funcion que calcula la matriz de pesos de un conjunto de recetas
 	def tf_idf(conj_recetas):
 		vector = TfidfVectorizer ()
 		X = vector.fit_transform(conj_recetas)
 		matriz_pesos = cosine_similarity(X,X)
 		return matriz_pesos
-
-	def obtener_puntuacion(matriz_pesos):
-		aux = matriz_pesos[0]
-		apta = True
-		for i in range(1, len(aux)):
-			if aux[i]>=0.8:
-				apta = False
-		return apta

@@ -1,8 +1,11 @@
 import json
 from excepciones import *
 import re
-
-	
+from nltk.corpus import stopwords
+import nltk
+from string import punctuation
+#Descargar las stopwords, necesario para la nueva funcionalidad
+nltk.download('stopwords')
 
 def obtener_diccionario_alimentos():
 	with open('./json/alimentos_es.json', 'r') as f:
@@ -48,3 +51,33 @@ def comprobar_numero(numero):
 	reg_exp = "\d+$"
 	resultado = re.match(reg_exp, numero)
 	return resultado
+
+
+palabras_a_eliminar = stopwords.words('spanish')
+signos_puntuacion = list(punctuation)
+def limpieza_texto(texto_inicial):
+		texto_final = ""
+		for palabra in texto_inicial.split():
+			if not palabra in palabras_a_eliminar or palabra in signos_puntuacion:
+				texto_final += palabra + ""
+		return texto_final
+
+def eliminar_signos_puntuacion(texto_inicial):
+	for palabra in signos_puntuacion:
+		texto_inicial = texto_inicial.replace(palabra, '')
+	return texto_inicial
+
+def procesar_elaboracion(elaboracion_receta):
+	elaboracion_receta = elaboracion_receta.lower()
+	elaboracion_receta = limpieza_texto(elaboracion_receta)
+	elaboracion_receta = eliminar_signos_puntuacion(elaboracion_receta)
+	return elaboracion_receta
+
+def obtener_puntuacion(puntuacion, matriz_pesos):
+	aux = matriz_pesos[0]
+	apta = True
+	for i in range(1, len(aux)):
+		if aux[i]>=puntuacion:
+			print(aux[i], puntuacion)
+			apta = False
+	return apta
