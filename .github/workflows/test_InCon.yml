@@ -1,0 +1,22 @@
+name: test
+
+on:
+  push:
+    paths:
+      - ".github/workflows/test_InCon.yml"
+      - "recetarium/recetas.py"
+      - "recetarium/funciones.py"
+      - "recetarium/excepciones.py"
+      - "test/test.py"
+      - "Dockerfile"
+
+jobs:
+  lanzar_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: lanzar test
+        run:
+          docker run -t -v `pwd`:/app/test jcgq/mii_cc_ugr
