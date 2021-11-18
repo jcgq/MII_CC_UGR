@@ -11,7 +11,9 @@ on:
 
 jobs:
   lanzar_test:
-    runs-on: jcgq/mii_cc_ugr
+    runs-on:
+      container:
+        image: jcgq/mii_cc_ugr
 
     steps:
       - uses: actions/checkout@v2
