@@ -6,7 +6,6 @@ on:
       - ".github/workflows/test_InCon.yml"
       - "recetarium/recetas.py"
       - "recetarium/funciones.py"
-      - "recetarium/excepciones.py"
       - "test/test.py"
       - "Dockerfile"
 
