@@ -12,9 +12,12 @@ on:
 jobs:
   lanzar_test:
     runs-on: ubuntu-latest
+    container: 
     image: jcgq/mii_cc_ugr
 
     steps:
+      - name: Crea infra para checkout
+        run: mkdir /__w/MII_CC_UGR/MII_CC_UGR
       - uses: actions/checkout@v2
 
       - name: lanzar test
