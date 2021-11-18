@@ -12,10 +12,14 @@ on:
 jobs:
   lanzar_test:
     runs-on: ubuntu-latest
+    container: 
+    image: jcgq/mii_cc_ugr
 
     steps:
+      - name: Creación de carpeta
+      run: 
       - uses: actions/checkout@v2
 
       - name: lanzar test
         run:
-          docker run -t -v `pwd`:/app/test jcgq/mii_cc_ugr
+          invoke test
