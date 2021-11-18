@@ -1,4 +1,6 @@
 import sys
+
+from numpy import mat
 sys.path.insert(1, 'recetarium')
 from recetas import Receta
 from funciones import *
@@ -135,6 +137,46 @@ class Test(unittest.TestCase):
         tiempo = "23"
         receta = Receta(nombre, alimentos, elaboracion, tiempo)
         assert(receta.__class__ == Receta)
+
+    def test_funcion_comparacion(self):
+        #Test Incorrecto. La misma receta está introducida
+        conjunto_elaboraciones = ["Hay que remover todo con la espátula y que el aceite esté bien caliente",
+        "Esta es la segunda", "Esta es la tercera"]
+        nombre = "Huevo frito"
+        alimentos= "1 kilo de champiñones;100 gramos de chocolate"
+        elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
+        tiempo = "23"
+        receta = Receta(nombre, alimentos, elaboracion, tiempo)
+        conjunto_elaboraciones.append(receta.elaboracion)
+        matriz = Receta.tf_idf(conjunto_elaboraciones)
+
+        assert(obtener_puntuacion(0.7, matriz) == False)
+
+        #Test Incorrecto. La misma receta es muy similar
+        conjunto_elaboraciones = ["Hay que remover todo con el tenedor y que el aceite esté bien frío",
+        "Esta es la segunda", "Esta es la tercera"]
+        nombre = "Huevo frito"
+        alimentos= "1 kilo de champiñones;100 gramos de chocolate"
+        elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
+        tiempo = "23"
+        receta = Receta(nombre, alimentos, elaboracion, tiempo)
+        conjunto_elaboraciones.append(receta.elaboracion)
+        matriz = Receta.tf_idf(conjunto_elaboraciones)
+
+        assert(obtener_puntuacion(0.7, matriz) == False)
+
+        #Test correcto
+        conjunto_elaboraciones = ["Esta es la primera",
+        "Esta es la segunda"]
+        nombre = "Huevo frito"
+        alimentos= "1 kilo de champiñones;100 gramos de chocolate"
+        elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
+        tiempo = "23"
+        receta = Receta(nombre, alimentos, elaboracion, tiempo)
+        conjunto_elaboraciones.append(receta.elaboracion)
+        matriz = Receta.tf_idf(conjunto_elaboraciones)
+        
+        assert(obtener_puntuacion(0.7, matriz) == True)
 
 
 if __name__ == "__main__":
