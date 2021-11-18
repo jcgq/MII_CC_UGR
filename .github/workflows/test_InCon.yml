@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Crea infra para checkout
-        run: sudo mkdir -p /__w/MII_CC_UGR/MII_CC_UGR && sudo chmod 777 /__w/MII_CC_UGR/MII_CC_UGR
+        run: sudo mkdir -p /__w/MII_CC_UGR/MII_CC_UGR
       - uses: actions/checkout@v2
 
       - name: lanzar test
