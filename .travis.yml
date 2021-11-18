@@ -1,6 +1,7 @@
 language: python
 python:
-  - "3.10"
+  - "nightly"
+  - "3.8"
 
 install:
   - python3 setup.py install
