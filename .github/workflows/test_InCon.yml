@@ -12,7 +12,7 @@ on:
 jobs:
   lanzar_test:
     runs-on: ubuntu-latest
-    container: jcgq/mii_cc_ugr
+    image: jcgq/mii_cc_ugr
 
     steps:
       - uses: actions/checkout@v2
