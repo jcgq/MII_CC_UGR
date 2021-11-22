@@ -8,6 +8,7 @@ on:
       - "recetarium/funciones.py"
       - "test/test.py"
       - "Dockerfile"
+      - "json/recetas.json"
 
 jobs:
   lanzar_test:
