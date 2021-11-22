@@ -20,9 +20,10 @@ Puede visualizar el fichero de travis en el siguiente [enlace](.travis.yml)
 Puede visualizar el fichero de travis en el siguiente [enlace](.github/workflows/test_InCon.yml)
 
 De manera adicional, se va a realizar en:
-## Circle CI
+### Circle CI
 Puede visualizar el fichero de travis en el siguiente [enlace](.circleci/config.yml)
 
+Para obtener la información sobre el desarrollo, elección y configuración de los entornos, [pulse aquí](doc/ci.md)
 
 # User Journey ✈️
 Podrá leerlo en el siguiente enlace [Clique aquí](https://github.com/jcgq/MII_CC_UGR/wiki)
