@@ -3,11 +3,11 @@ version: 1.1
 jobs:
     test:
         docker:
-            - image: jcgq/mii_cc_ugr:latest
+            - image: circleci/python:3.8
         steps:
             - checkout
+            - run: python setup.py -q install
             - run: invoke test
-
           
 workflows:
     test_project:
