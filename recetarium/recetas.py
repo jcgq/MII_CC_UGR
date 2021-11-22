@@ -1,7 +1,5 @@
 from funciones import *
 import re
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
 class Receta:
 
 	diccionario_unidades = {"unidades":["litro", "litros", "kg", "kilos", "kilo", 
@@ -15,7 +13,7 @@ class Receta:
 	longitud_min_elaboracion = 20
 
 	def __init__(self, nombre_receta, alimentos, elaboracion, tiempo):
-		if not self.receta_invalida(nombre_receta, alimentos, elaboracion, tiempo):
+		if not self.receta_invalida(nombre_receta, alimentos, elaboracion, tiempo) and Receta.obtener_puntuacion(0.7,Receta.obtener_recetas(elaboracion)):
 				self.nombre_receta = nombre_receta
 				self.alimentos = alimentos
 				self.elaboracion = elaboracion
@@ -68,9 +66,22 @@ class Receta:
 		else:
 			return False
 
-	#Funcion que calcula la matriz de pesos de un conjunto de recetas
-	def tf_idf(conj_recetas):
-		vector = TfidfVectorizer ()
-		X = vector.fit_transform(conj_recetas)
-		matriz_pesos = cosine_similarity(X,X)
-		return matriz_pesos
+	def obtener_recetas(elaboracion):
+		with open('./json/recetas.json', 'r') as f:
+			try:
+				c = f.read()
+			except FileNotFoundError:
+				print("Error en la lectura del Json")
+		datos_recetas = json.loads(c)
+		elaboraciones = [dato["elaboracion"] for dato in datos_recetas]
+		elaboraciones.insert(0, elaboracion)
+		return elaboraciones
+
+	def obtener_puntuacion(puntuacion, conjunto_elaboracion):
+		matriz_pesos = tf_idf(conjunto_elaboracion)
+		aux = matriz_pesos[0]
+		apta = True
+		for i in range(1, len(aux)):
+			if aux[i]>=puntuacion:
+				apta = False
+		return apta
