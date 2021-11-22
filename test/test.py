@@ -186,8 +186,5 @@ class Test(unittest.TestCase):
         receta = Receta(nombre, alimentos, elaboracion, tiempo)
         assert(receta.__class__ == Receta)
 
-
-
-
 if __name__ == "__main__":
     unittest.main()
