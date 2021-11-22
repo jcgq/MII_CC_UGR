@@ -139,44 +139,24 @@ class Test(unittest.TestCase):
         assert(receta.__class__ == Receta)
 
     def test_funcion_comparacion(self):
-        #Test Incorrecto. La misma receta está introducida
-        conjunto_elaboraciones = ["Hay que remover todo con la espátula y que el aceite esté bien caliente",
-        "Esta es la segunda", "Esta es la tercera"]
-        nombre = "Huevo frito"
-        alimentos= "1 kilo de champiñones;100 gramos de chocolate"
+        #Test Incorrecto. La receta ya está en el sistema
+        elaboracion = "Cómo hacer un buen sofrito de paella Poned primero la paella o recipiente a fuego fuerte con aceite de oliva y un poco de sal para que no salpique la carne, añadid la carne (si estáis haciendo paella de marisco el marisco) y doradla. Luego bajad el fuego y añadimos las verduras, dejando que se rehoguen durante unos 5 minutos. Veréis que en este tipo de sofrito para paella no se usa cebolla, ya que los jugos de la misma abren el arroz. El arroz ideal para la paella valenciana El arroz es el principal ingrediente de la paella valenciana, y conseguir un arroz en su punto es el mejor secreto para que vuestra paella brille con luz propia. En alguna ocasión os hemos explicado los distintos tipos de arroz que existen, y en el caso de la paella valenciana el mejor arroz es el arroz bomba, que tiene un grano medio-corto y cuya principal característica es que absorbe más agua que otros arroces. El arroz bomba es más caro que otros arroces pero os aseguramos que la inversión merece la pena ¡vuestra paella ganará muchos puntos!"
+        elaboraciones = Receta.obtener_recetas(elaboracion)
+        assert(Receta.obtener_puntuacion(0.7,elaboraciones) == False)
+
+        #Test Incorrecto. La receta es muy similar a una en el sistema
+        elaboracion = "Cómo hacer un buen sofrito de paella Poned primero la paella a fuego fuerte con aceite de oliva y un poco de sal para que no salpique la carne, añadid el pescado y doradla. Luego bajad el fuego y añadimos las verduras, dejando que se rehoguen durante unos 5 minutos. Veréis que en este tipo de sofrito para paella no se usa cebolla, ya que los jugos de la misma abren el arroz. El arroz ideal para la paella valenciana El arroz es el principal ingrediente de la paella valenciana, y conseguir un arroz en su punto es el mejor secreto para que vuestra paella brille con luz propia. En alguna ocasión os hemos explicado los distintos tipos de arroz que existen, y en el caso de la paella valenciana el mejor arroz es el arroz bomba, que tiene un grano medio-corto y cuya principal característica es que absorbe más agua que otros arroces. El arroz bomba es más caro que otros arrocitos pero os aseguramos que la inversión merece la pena"
+        elaboraciones = Receta.obtener_recetas(elaboracion)
+        assert(Receta.obtener_puntuacion(0.7,elaboraciones) == False)
+
+        #Test Correcto. Nueva receta en el sistema
         elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
-        tiempo = "23"
-        receta = Receta(nombre, alimentos, elaboracion, tiempo)
-        conjunto_elaboraciones.append(receta.elaboracion)
-        matriz = Receta.tf_idf(conjunto_elaboraciones)
+        elaboraciones = Receta.obtener_recetas(elaboracion)
+        assert(Receta.obtener_puntuacion(0.7,elaboraciones) == True)
 
-        assert(obtener_puntuacion(0.7, matriz) == False)
 
-        #Test Incorrecto. La misma receta es muy similar
-        conjunto_elaboraciones = ["Hay que remover todo con el tenedor y que el aceite esté bien frío",
-        "Esta es la segunda", "Esta es la tercera"]
-        nombre = "Huevo frito"
-        alimentos= "1 kilo de champiñones;100 gramos de chocolate"
-        elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
-        tiempo = "23"
-        receta = Receta(nombre, alimentos, elaboracion, tiempo)
-        conjunto_elaboraciones.append(receta.elaboracion)
-        matriz = Receta.tf_idf(conjunto_elaboraciones)
 
-        assert(obtener_puntuacion(0.7, matriz) == False)
 
-        #Test correcto
-        conjunto_elaboraciones = ["Esta es la primera",
-        "Esta es la segunda"]
-        nombre = "Huevo frito"
-        alimentos= "1 kilo de champiñones;100 gramos de chocolate"
-        elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
-        tiempo = "23"
-        receta = Receta(nombre, alimentos, elaboracion, tiempo)
-        conjunto_elaboraciones.append(receta.elaboracion)
-        matriz = Receta.tf_idf(conjunto_elaboraciones)
-        
-        assert(obtener_puntuacion(0.7, matriz) == True)
 
 
 if __name__ == "__main__":
