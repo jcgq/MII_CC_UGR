@@ -17,11 +17,11 @@ Se realizará en tres entornos distintos:
 Puede visualizar el fichero de travis en el siguiente [enlace](.travis.yml)
 
 ## GitHub Action
-Puede visualizar el fichero de travis en el siguiente [enlace](.github/workflows/test_InCon.yml)
+Puede visualizar el fichero de github action en el siguiente [enlace](.github/workflows/test_InCon.yml)
 
 De manera adicional, se va a realizar en:
 ### Circle CI
-Puede visualizar el fichero de travis en el siguiente [enlace](.circleci/config.yml)
+Puede visualizar el fichero de cricle ci en el siguiente [enlace](.circleci/config.yml)
 
 Para obtener la información sobre el desarrollo, elección y configuración de los entornos, [pulse aquí](doc/ci.md)
 
