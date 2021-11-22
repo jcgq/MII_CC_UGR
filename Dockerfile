@@ -1,5 +1,5 @@
 #Python correcto
-FROM python:3.9-slim
+FROM python:3.8-slim
 
 #Encontrado en varios foros, sino PIP no es encontrado y no se puede utilizar
 ENV PATH=/home/app/.local/bin:$PATH
