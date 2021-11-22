@@ -4,6 +4,8 @@ import re
 from nltk.corpus import stopwords
 import nltk
 from string import punctuation
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 #Descargar las stopwords, necesario para la nueva funcionalidad
 nltk.download('stopwords')
 
@@ -73,11 +75,9 @@ def procesar_elaboracion(elaboracion_receta):
 	elaboracion_receta = eliminar_signos_puntuacion(elaboracion_receta)
 	return elaboracion_receta
 
-def obtener_puntuacion(puntuacion, matriz_pesos):
-	aux = matriz_pesos[0]
-	apta = True
-	for i in range(1, len(aux)):
-		if aux[i]>=puntuacion:
-			print(aux[i], puntuacion)
-			apta = False
-	return apta
+def tf_idf(conj_recetas):
+	vector = TfidfVectorizer ()
+	X = vector.fit_transform(conj_recetas)
+	matriz_pesos = cosine_similarity(X,X)
+	print(matriz_pesos)
+	return matriz_pesos
