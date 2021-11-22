@@ -1,3 +1,5 @@
+version: 1.1
+
 jobs:
     test:
         docker:
@@ -6,7 +8,7 @@ jobs:
             - checkout
             - run: invoke test
 
-            
+          
 workflows:
     test_project:
         jobs:
