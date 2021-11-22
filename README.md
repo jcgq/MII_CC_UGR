@@ -12,7 +12,16 @@
 
 # Integración continua
 
-Espacio para la integración continua...
+Se realizará en tres entornos distintos:
+## Travis
+Puede visualizar el fichero de travis en el siguiente [enlace](.travis.yml)
+
+## GitHub Action
+Puede visualizar el fichero de travis en el siguiente [enlace](.github/workflows/test_InCon.yml)
+
+De manera adicional, se va a realizar en:
+## Circle CI
+Puede visualizar el fichero de travis en el siguiente [enlace](.circleci/config.yml)
 
 
 # User Journey ✈️
