@@ -6,7 +6,7 @@ jobs:
             - image: jcgq/mii_cc_ugr:latest
         steps:
             - checkout
-            - run: docker run -t -v `pwd`:/app/test jcgq/mii_cc_ugr
+            - run: invoke test
           
 workflows:
     test_project:
