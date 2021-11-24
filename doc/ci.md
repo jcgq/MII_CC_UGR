@@ -14,9 +14,9 @@ Al estar prácticamente algo "descuidado", las últimas versiones que están dis
 - "3.8": Es la que usaremos
 - "3.9": Aunque es inestable, la usaremos como otra versión de python.
 - "3.9-dev"  Aún en desarrollo, es inestable y no funcionan las buenas prácticas.
-- "nightly"  Se encuentra en construcción
+- "nightly"  Se encuentra en construcción (versión beta)
 
-La versión 3.10 no está en ninguna de las versiones de Travis, por lo que no podemos utilizar la más actual.
+La versión 3.10 se encuentra en la arquitectura aarch64, sin embargo, como se comentó en la documentación de [docker](estudioDockerfile.md), no es posible instalar, por problemas de compatibilidad, el módulo de scipy, librería que se encuentra en sklearn. Por lo que, debemos también descartarla.
 
 ## Ejecución de los test
 Aquí se muestra que los test han sido pasados sin ningún problema:
