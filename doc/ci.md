@@ -34,6 +34,14 @@ Puesto que no requiere instalación, se consigue una CI totalmente asíncrona, u
 
 <img src="imagenes/github.png" width="800" height="350">
 
+En este caso, es necesario que nos descarguemos la imagen de nuestro repositorio, sin usarlo directamente, puesto que nos ocurren varios errores:
+- Busca una carpeta "__m/MII_CC_UGR/...", que no existe
+- Si se crea, no tiene permisos para trabajar en ella.
+- Si le intentas dar los permisos necesarios, no eres un usuario root
+- Si intentas ser un usuario root, no te lo permite.
+
+Con lo que intentamos, solo se ganaría reducir un total de 6 segundos en lso tests, por lo que el trabajo que hay que realizar, es más tedioso que el hecho de descargar la imagen.
+
 ---------------------------------------------------
 
 Hemos estado comprobando que otras opciones podemos utilizar para usar otro ejemplo de integración contínua.
