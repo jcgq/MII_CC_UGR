@@ -2,7 +2,7 @@
 ## Contenedor base
 Para realizar el docker para los test, se utilizará la imagen oficial de Python y como versión:
 ```python
-  FROM pyhton:3.9-slim
+  FROM python:3.9-slim
 ```
 Para ver la explicación de la elección, [pulse aquí](estudioDockerfile.md)
 
