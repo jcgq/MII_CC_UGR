@@ -85,3 +85,11 @@ class Receta:
 			if aux[i]>=puntuacion:
 				apta = False
 		return apta
+
+	def calcular_calorias(self, alimentos):
+		alimentos = alimentos.split(";")
+		gramos = 0
+		for i in range(0,len(alimentos)):
+			aux = alimentos[i].split(" ")
+			gramos += pasar_a_gramos(aux[0], aux[1], aux[3])
+		return gramos
