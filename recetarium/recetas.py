@@ -18,7 +18,7 @@ class Receta:
 				self.alimentos = alimentos
 				self.elaboracion = elaboracion
 				self.tiempo = tiempo
-				self.calorias = self.calcular_calorias(alimentos)
+				self.calorias = Receta.calcular_calorias(alimentos)
 		else:
 			raise MisExcepciones("Receta", "Los atributos de la receta tienen errores")
 
@@ -87,7 +87,7 @@ class Receta:
 				apta = False
 		return apta
 
-	def calcular_calorias(self, alimentos):
+	def calcular_calorias(alimentos):
 		alimentos = alimentos.split(";")
 		gramos = 0
 		for i in range(0,len(alimentos)):
