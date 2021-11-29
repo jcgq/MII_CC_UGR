@@ -66,7 +66,7 @@
         "categoria": "Generic foods"
     },
     {
-        "nombre": "champiñones",
+        "nombre": "champi\u00f1ones",
         "nutrientes": {
             "ENERC_KCAL": 25.0,
             "PROCNT": 1.87,
@@ -88,7 +88,7 @@
         "categoria": "Generic foods"
     },
     {
-        "nombre": "salmón",
+        "nombre": "salm\u00f3n",
         "nutrientes": {
             "ENERC_KCAL": 138.0,
             "PROCNT": 23.1,
@@ -132,7 +132,7 @@
         "categoria": "Generic foods"
     },
     {
-        "nombre": "jamón",
+        "nombre": "jam\u00f3n",
         "nutrientes": {
             "ENERC_KCAL": 163.0,
             "PROCNT": 16.6,
@@ -205,6 +205,171 @@
             "FAT": 3.24,
             "CHOCDF": 48.68,
             "FIBTG": 4.0
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "verduras",
+        "nutrientes": {
+            "ENERC_KCAL": 72.0,
+            "PROCNT": 3.33,
+            "FAT": 0.52,
+            "CHOCDF": 13.47,
+            "FIBTG": 4.0
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "huevos",
+        "nutrientes": {
+            "ENERC_KCAL": 155.0,
+            "PROCNT": 12.58,
+            "FAT": 10.61,
+            "CHOCDF": 1.12,
+            "FIBTG": 0.0
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "beicon",
+        "nutrientes": {
+            "ENERC_KCAL": 417.0,
+            "PROCNT": 12.62,
+            "FAT": 39.69,
+            "CHOCDF": 1.28,
+            "FIBTG": 0.0
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "macarrones",
+        "nutrientes": {
+            "ENERC_KCAL": 158.0,
+            "PROCNT": 5.8,
+            "FAT": 0.93,
+            "CHOCDF": 30.86,
+            "FIBTG": 1.8
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "cebolla",
+        "nutrientes": {
+            "ENERC_KCAL": 40.0,
+            "PROCNT": 1.1,
+            "FAT": 0.1,
+            "CHOCDF": 9.34,
+            "FIBTG": 1.7
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "limón",
+        "nutrientes": {
+            "ENERC_KCAL": 29.0,
+            "PROCNT": 1.1,
+            "FAT": 0.3,
+            "CHOCDF": 9.32,
+            "FIBTG": 2.8
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "pimiento",
+        "nutrientes": {
+            "ENERC_KCAL": 31.0,
+            "PROCNT": 0.99,
+            "FAT": 0.3,
+            "CHOCDF": 6.03,
+            "FIBTG": 2.1
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "dátiles",
+        "nutrientes": {
+            "ENERC_KCAL": 277.0,
+            "PROCNT": 1.81,
+            "FAT": 0.15,
+            "CHOCDF": 74.97,
+            "FIBTG": 6.7
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "sal",
+        "nutrientes": {
+            "ENERC_KCAL": 1.0,
+            "PROCNT": 0.26,
+            "FAT": 0.17,
+            "CHOCDF": 13.81,
+            "FIBTG": 2.4
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "marisco",
+        "nutrientes": {
+            "ENERC_KCAL": 52.0,
+            "PROCNT": 0.26,
+            "FAT": 0.17,
+            "CHOCDF": 13.81,
+            "FIBTG": 2.4
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "arroz",
+        "nutrientes": {
+            "ENERC_KCAL": 130.0,
+            "PROCNT": 2.69,
+            "FAT": 0.28,
+            "CHOCDF": 28.17,
+            "FIBTG": 0.4
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "mayonesa",
+        "nutrientes": {
+            "ENERC_KCAL": 692.0,
+            "PROCNT": 0.0,
+            "FAT": 77.0,
+            "CHOCDF": 0.0,
+            "FIBTG": 0.0
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "pan integral",
+        "nutrientes": {
+            "ENERC_KCAL": 52.0,
+            "PROCNT": 0.26,
+            "FAT": 0.17,
+            "CHOCDF": 13.81,
+            "FIBTG": 2.4
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "azúcar",
+        "nutrientes": {
+            "ENERC_KCAL": 387.0,
+            "PROCNT": 0.0,
+            "FAT": 0.0,
+            "CHOCDF": 99.98,
+            "FIBTG": 0.0
+        },
+        "categoria": "Generic foods"
+    },
+    {
+        "nombre": "manzana",
+        "nutrientes": {
+            "ENERC_KCAL": 52.0,
+            "PROCNT": 0.26,
+            "FAT": 0.17,
+            "CHOCDF": 13.81,
+            "FIBTG": 2.4
         },
         "categoria": "Generic foods"
     }
