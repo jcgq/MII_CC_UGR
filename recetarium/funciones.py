@@ -9,7 +9,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 #Descargar las stopwords, necesario para la nueva funcionalidad
 nltk.download('stopwords')
 
-def obtener_diccionario_alimentos():
+def leer_json_alimentos():
 	with open('./json/alimentos_es.json', 'r') as f:
 		try:
 			c = f.read()
@@ -17,6 +17,10 @@ def obtener_diccionario_alimentos():
 			print("Error en la lectura del Json")
 
 	datos_alimentos = json.loads(c)
+	return datos_alimentos
+
+def obtener_diccionario_alimentos():
+	datos_alimentos = leer_json_alimentos()
 	array_alimentos = []
 
 	array_alimentos = [dato["nombre"] for dato in datos_alimentos]
@@ -79,5 +83,24 @@ def tf_idf(conj_recetas):
 	vector = TfidfVectorizer ()
 	X = vector.fit_transform(conj_recetas)
 	matriz_pesos = cosine_similarity(X,X)
-	print(matriz_pesos)
 	return matriz_pesos
+
+
+
+def pasar_a_gramos(peso, unidad, alimento):
+	dic_alimentos = leer_json_alimentos()
+	gramos_finales = 0
+	calorias = 0
+	for i in range(0, len(dic_alimentos)):
+		if(dic_alimentos[i]["nombre"] == alimento):
+			calorias = int(dic_alimentos[i]["nutrientes"]["ENERC_KCAL"])
+
+	if(unidad == "gr" or unidad == "gramos"):
+		gramos_finales = (int(peso)*calorias)/100
+	else:
+		if(unidad == "litro" or unidad == "litros" or unidad == "kg" or unidad == "kilos" or unidad == "kilo"):
+			gramos_finales = (int(peso)*1000*calorias)/100
+		else:
+			gramos_finales = (int(peso)*12*calorias)/100
+	return gramos_finales
+
