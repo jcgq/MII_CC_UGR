@@ -186,5 +186,24 @@ class Test(unittest.TestCase):
         receta = Receta(nombre, alimentos, elaboracion, tiempo)
         assert(receta.__class__ == Receta)
 
+    def test_nivel_calorico(self):
+        #Test Incorrecto. La suma no es correcta
+        alimentos= "1 kilo de champiñones;100 gramos de chocolate"
+        calorias = Receta.calcular_calorias(alimentos)
+        assert(calorias!=0.0)
+
+        #Test Correcto. 
+        alimentos= "1 kilo de champiñones;100 gramos de chocolate"
+        calorias = Receta.calcular_calorias(alimentos)
+        assert(calorias==730.0)
+
+        #Test correcto. Se crea la receta con el nivel calórico
+        nombre = "Huevo frito"
+        alimentos= "1 kilo de champiñones;100 gramos de chocolate"
+        elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
+        tiempo = "23"
+        receta = Receta(nombre, alimentos, elaboracion, tiempo)
+        assert(receta.calorias == 730.0)
+
 if __name__ == "__main__":
     unittest.main()
