@@ -18,6 +18,7 @@ class Receta:
 				self.alimentos = alimentos
 				self.elaboracion = elaboracion
 				self.tiempo = tiempo
+				self.calorias = self.calcular_calorias(alimentos)
 		else:
 			raise MisExcepciones("Receta", "Los atributos de la receta tienen errores")
 
