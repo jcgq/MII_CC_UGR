@@ -6,11 +6,13 @@ import nltk
 from string import punctuation
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+import pandas as pd
+
 #Descargar las stopwords, necesario para la nueva funcionalidad
 nltk.download('stopwords')
 
 def leer_json_alimentos():
-	with open('./json/alimentos_es.json', 'r') as f:
+	with open('../json/alimentos_es.json', 'r') as f:
 		try:
 			c = f.read()
 		except FileNotFoundError:
@@ -28,7 +30,6 @@ def obtener_diccionario_alimentos():
 	diccionario_alimentos = {"alimentos":array_alimentos}
 
 	return diccionario_alimentos
-
 
 
 def lanzar_excepcion(atributo, causa):
@@ -85,8 +86,6 @@ def tf_idf(conj_recetas):
 	matriz_pesos = cosine_similarity(X,X)
 	return matriz_pesos
 
-
-
 def pasar_a_gramos(peso, unidad, alimento):
 	dic_alimentos = leer_json_alimentos()
 	gramos_finales = 0
@@ -104,3 +103,27 @@ def pasar_a_gramos(peso, unidad, alimento):
 			gramos_finales = (int(peso)*12*calorias)/100
 	return gramos_finales
 
+def obtener_dataframe(alimentos):
+	df = pd.read_json (r'../json/recetas.json')
+	array_aux = []
+	corr_ali_cal = []
+	contiene = []
+	ids = []
+	for i in range(0, len(df)):
+		aux_alimentos = df["alimentos"][i].split(";")
+		array_aux.append(len(aux_alimentos))
+		corr_ali_cal.append(df["calorias"][i] / len(aux_alimentos))
+		ids.append(i)
+		aux = (df["alimentos"][i].replace(";", " ")).split(" ")
+		contador = 0
+		for i in range(0, len(alimentos)):
+			if aux.__contains__(alimentos[i]):
+				contador = contador +1
+		contiene.append(contador)
+		contador=0
+
+	df = df.assign(num_alimentos = array_aux)
+	df = df.assign(calorias_alimentos = corr_ali_cal)
+	df = df.assign(id = ids)
+	df = df.assign(contiene_alimento = contiene)
+	return df
