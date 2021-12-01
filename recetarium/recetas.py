@@ -1,5 +1,6 @@
 from funciones import *
 import re
+import pandas as pd
 class Receta:
 
 	diccionario_unidades = {"unidades":["litro", "litros", "kg", "kilos", "kilo", 
@@ -94,3 +95,22 @@ class Receta:
 			aux = alimentos[i].split(" ")
 			gramos += pasar_a_gramos(aux[0], aux[1], aux[3])
 		return gramos
+
+
+	def buscar_receta(ingredientes, receta, calorias):
+		df = obtener_dataframe(ingredientes)
+		if(receta!=None):
+			if(df.isin(['Nombre', receta]).any().any()):
+				lista_elaboracion = df["elaboracion"].values.tolist()
+				ma_tfidf = tf_idf(lista_elaboracion)
+				df = df.assign(similitud = ma_tfidf[df["id"][df["nombre"]== receta].values[0]])
+				resultado = df[(df['contiene_alimento']>1) | (df['calorias_alimentos']<calorias)].sort_values('similitud', ascending=False)
+			else:
+				resultado = df[df['calorias_alimentos']<calorias].sort_values('contiene_alimento', ascending=False)
+		else:
+			resultado = df[df['calorias_alimentos']<calorias].sort_values('contiene_alimento', ascending=False)
+		
+		if not resultado.empty:
+			resultado = resultado[['nombre', 'calorias']].head(3)
+			
+		return resultado
