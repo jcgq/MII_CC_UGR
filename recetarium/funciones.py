@@ -12,7 +12,7 @@ import pandas as pd
 nltk.download('stopwords')
 
 def leer_json_alimentos():
-	with open('json/alimentos_es.json', 'r') as f:
+	with open('./json/alimentos_es.json', 'r') as f:
 		try:
 			c = f.read()
 		except FileNotFoundError:
@@ -104,7 +104,7 @@ def pasar_a_gramos(peso, unidad, alimento):
 	return gramos_finales
 
 def obtener_dataframe(alimentos):
-	df = pd.read_json (r'json/recetas.json')
+	df = pd.read_json (r'./json/recetas.json')
 	array_aux = []
 	corr_ali_cal = []
 	contiene = []
