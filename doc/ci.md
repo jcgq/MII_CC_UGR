@@ -1,3 +1,18 @@
+# Integración continua
+
+Se realizará en tres entornos distintos:
+## Travis
+Puede visualizar el fichero de travis en el siguiente [enlace](../.travis.yml)
+
+## GitHub Action
+Puede visualizar el fichero de github action en el siguiente [enlace](../.github/workflows/test_InCon.yml)
+
+De manera adicional, se va a realizar en:
+### Circle CI
+Puede visualizar el fichero de cricle ci en el siguiente [enlace](../.circleci/config.yml)
+
+Para obtener la información sobre el desarrollo, elección y configuración de los entornos
+
 # Travis
 Las ventajas para el uso de travis son:
  - Fácil de implementar, pues en pocas líneas se puede crear un archivo para pasar los test.

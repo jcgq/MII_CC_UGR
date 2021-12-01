@@ -10,20 +10,12 @@
 
 - 🐋 Docker, [conoce la configuración](doc/docker.md)
 
-# Integración continua
+- ⚗️ Integración continua, [¿cómo funciona?](doc/ci.md)
 
-Se realizará en tres entornos distintos:
-## Travis
-Puede visualizar el fichero de travis en el siguiente [enlace](.travis.yml)
+# API Rest
+En progreso...
 
-## GitHub Action
-Puede visualizar el fichero de github action en el siguiente [enlace](.github/workflows/test_InCon.yml)
 
-De manera adicional, se va a realizar en:
-### Circle CI
-Puede visualizar el fichero de cricle ci en el siguiente [enlace](.circleci/config.yml)
-
-Para obtener la información sobre el desarrollo, elección y configuración de los entornos, [pulse aquí](doc/ci.md)
 
 # User Journey ✈️
 Podrá leerlo en el siguiente enlace [Clique aquí](https://github.com/jcgq/MII_CC_UGR/wiki)
