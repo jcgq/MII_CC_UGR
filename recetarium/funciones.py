@@ -1,8 +1,8 @@
 import json
 from excepciones import *
 import re
-from nltk.corpus import stopwords
 import nltk
+from nltk.corpus import stopwords
 from string import punctuation
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -12,7 +12,7 @@ import pandas as pd
 nltk.download('stopwords')
 
 def leer_json_alimentos():
-	with open('../json/alimentos_es.json', 'r') as f:
+	with open('json/alimentos_es.json', 'r') as f:
 		try:
 			c = f.read()
 		except FileNotFoundError:
@@ -104,7 +104,7 @@ def pasar_a_gramos(peso, unidad, alimento):
 	return gramos_finales
 
 def obtener_dataframe(alimentos):
-	df = pd.read_json (r'../json/recetas.json')
+	df = pd.read_json (r'json/recetas.json')
 	array_aux = []
 	corr_ali_cal = []
 	contiene = []
@@ -127,3 +127,51 @@ def obtener_dataframe(alimentos):
 	df = df.assign(id = ids)
 	df = df.assign(contiene_alimento = contiene)
 	return df
+
+def obtener_json():
+	with open('json/recetas.json', 'r') as f:
+		try:
+			c = f.read()
+		except FileNotFoundError:
+			response.status = 400
+			return "{'Error':'404 Fichero no encontrado'}"
+	return json.loads(c)
+
+def obtener_diccionario(datos_alimentos):
+	diccionario = {}
+	
+	for i in range(0, len(datos_alimentos)):
+		nom = datos_alimentos[i]["nombre"]
+		ali = datos_alimentos[i]["alimentos"]
+		ela = datos_alimentos[i]["elaboracion"]
+		tim = datos_alimentos[i]["tiempo"]
+		cal = datos_alimentos[i]["calorias"]
+		diccionario[nom] = {"nombre":nom, "alimento":ali, "elaboracion":ela, "tiempo":tim, "calorias":cal}
+
+	return diccionario
+
+def aniadir_receta_json(receta):
+			#Definición de la estructura del JSON
+	datos = {
+		'nombre':receta.nombre_receta,
+		'alimentos':receta.alimentos,
+		'elaboracion':receta.elaboracion,
+		'tiempo':receta.tiempo,
+		'calorias':receta.calorias
+	}
+
+	cadena_json = json.dumps(datos)
+
+	#Lectura
+	with open('json/recetas.json', 'r') as f:
+		c = f.read()
+
+	datosMod = json.dumps(datos)
+	s = json.loads(c)
+	s.append(datos)
+	sC = json.dumps(s, indent=4)
+
+	#Escritura
+	with open('json/recetas.json', 'w') as f:
+		f.write(sC)
+		f.close()

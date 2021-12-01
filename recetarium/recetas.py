@@ -69,7 +69,7 @@ class Receta:
 			return False
 
 	def obtener_recetas(elaboracion):
-		with open('./json/recetas.json', 'r') as f:
+		with open('json/recetas.json', 'r') as f:
 			try:
 				c = f.read()
 			except FileNotFoundError:
@@ -112,5 +112,5 @@ class Receta:
 		
 		if not resultado.empty:
 			resultado = resultado[['nombre', 'calorias']].head(3)
-			
+
 		return resultado
