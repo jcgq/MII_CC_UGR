@@ -1,69 +1,69 @@
 [
     {
-      "nombre":"Macarrones con queso",
+      "nombre":"macarrones con queso",
       "alimentos":"400 gr de macarrones;180 gramos de queso;10 gramos de sal",
       "elaboracion":"Hervimos los macarrones según las instrucciones del envase. Intenta que la pasta quede entera y en su punto. En una sartén al fuego ponemos la mantequilla hasta que se derrita. Antes de que llegue a quemarse añadimos la harina y removemos para que tome color. Ponemos la cucharadita de mostaza y vamos añadiendo poco a poco la leche removiendo sin parar para que no se formen grumos. Salpimentamos. Cuando la salsa esté bien ligada y en su punto añadimos 150 gr de queso (reservamos un poco para gratinar) y mezclamos bien. Escurrimos los macarrones del agua de cocción pero sin enjuagarlos y cuando están bien calientes mezclamos con la salsa de queso con movimientos fuertes para que ligue todo bien. Ponemos en un recipiente de horno, cubrimos con el resto del queso y damos un golpe bajo el grill hasta que la superficie dore un poquito. Servimos al momento.",
       "tiempo":"180",
-      "calorias":"345,87"
+      "calorias":"345.87"
     },
     {
-      "nombre":"Paella valenciana",
+      "nombre":"paella valenciana",
       "alimentos":"400 gr de arroz;180 gramos de marisco;10 gramos de sal;200 gramos de verduras",
       "elaboracion":"Cómo hacer un buen sofrito de paella Poned primero la paella o recipiente a fuego fuerte con aceite de oliva y un poco de sal para que no salpique la carne, añadid la carne (si estáis haciendo paella de marisco el marisco) y doradla. Luego bajad el fuego y añadimos las verduras, dejando que se rehoguen durante unos 5 minutos. Veréis que en este tipo de sofrito para paella no se usa cebolla, ya que los jugos de la misma abren el arroz. El arroz ideal para la paella valenciana El arroz es el principal ingrediente de la paella valenciana, y conseguir un arroz en su punto es el mejor secreto para que vuestra paella brille con luz propia. En alguna ocasión os hemos explicado los distintos tipos de arroz que existen, y en el caso de la paella valenciana el mejor arroz es el arroz bomba, que tiene un grano medio-corto y cuya principal característica es que absorbe más agua que otros arroces. El arroz bomba es más caro que otros arroces pero os aseguramos que la inversión merece la pena ¡vuestra paella ganará muchos puntos!",
       "tiempo":"200",
-      "calorias":"1345,87"
+      "calorias":"1345.87"
     },
     {
-      "nombre":"Tarta de queso",
+      "nombre":"tarta de queso",
       "alimentos":"600 gr de queso;120 gramos de huevos;200 gramos de azúcar;0,25 litros de leche",
       "elaboracion":"Casca los huevos a un bol y rómpelos con una varilla manual. Agrega el azúcar y la harina, y mezcla un poco. Incorpora el queso crema a temperatura ambiente (sin batir) y sigue mezclando. Finalmente vierte la nata líquida y mezcla hasta conseguir una masa homogénea. Cubre un molde desmontable (de 18 centímetros de diámetro) con papel sulfurizado o papel vegetal para horno. Vierte dentro la mezcla y hornéala a 200º durante 40-45 minutos. Retira la tarta de queso del horno y deja reposar (3-4 horas) hasta que se enfríe bien antes de desmoldar. Desmolda la tarta y retírale el papel con cuidado para no romperla. Sirve la tarta de queso La Viña, córtala en porciones y adorna los platos con unas hojas de menta.",
       "tiempo":"360",
       "calorias":"1241"
     },
     {
-      "nombre":"Tarta de chocolate",
+      "nombre":"tarta de chocolate",
       "alimentos":"600 gr de chocolate;120 gramos de huevos;200 gramos de azúcar;0,25 litros de leche",
       "elaboracion":"Trituramos las galletas dentro de una bolsa de plástico bien cerrada y pasando por encima un rodillo. Agregamos la mantequilla a temperatura ambiente o, incluso mejor, ligeramente fundida. Mezclamos bien para obtener una masa homogénea. Cubrimos la base y laterales de un molde desmoldable de 25 cm, aplastando bien para compactar, y guardamos en la nevera o congelador para que endurezca. Mientras tanto preparamos el relleno. Picamos el chocolate y lo calentamos en un cacito junto con la leche, los dos sobres de cuajada y el azúcar durante 10 minutos. Removemos bien para que no queden grumos. Vertemos sobre la base de galletas y dejamos cuajar en la nevera durante cuatro horas aproximadamente. Con un pelador hacemos virutas de chocolate blanco y decoramos la tarta en el momento de servir.",
       "tiempo":"120",
       "calorias":"1500"
     },
     {
-      "nombre":"Crema de calabaza",
+      "nombre":"crema de calabaza",
       "alimentos":"400 gr de calabaza;200 gramos de patata;40 gramos de zanahoria;210 gramos de puerros;1 litro de agua; 0,30 litros de aceite; 1 chucharadita de sal",
       "elaboracion":"Para preparar la crema de calabaza, pon a calentar 5 vasos de agua con 2 cucharadas de aceite de oliva en una cazuela al fuego. Mientras se calienta, prepara las verduras. Para ello, pela la calabaza y córtala en dados grandes. Retira la parte inferior y superior de las zanahorias, pélalas y córtalas en rodajas de 1 centímetro aproximadamente. Limpia el puerro bien para retirar toda la suciedad. Corta un trozo pequeño y resérvalo para decorar los platos. Corta en rodajas el resto del puerro. Por último, pela la patata y trocéala como para guisar, es decir, cáscala con ayuda de un cuchillo. Una vez estén listas las verduras, introdúcelas en la cazuela: la calabaza, las zanahorias, el puerro y la patata. Añade sal a tu gusto.Pon la tapa a la cazuela y deja cocer durante 25 minutos a fuego medio, hasta que las verduras estén blandas. Retira la cazuela del fuego y tritura todo con la batidora eléctrica hasta que quede una crema fina.",
       "tiempo":"120",
       "calorias":"1500"
     },
     {
-      "nombre":"Espaguettis con queso",
+      "nombre":"espaguettis con queso",
       "alimentos":"400 gr de espaguetis;180 gramos de queso;10 gramos de sal",
       "elaboracion":"Hervimos los macarrones según las instrucciones del envase. Intenta que la pasta quede entera y en su punto. En una sartén al fuego ponemos la mantequilla hasta que se derrita. Antes de que llegue a quemarse añadimos la harina y removemos para que tome color. Ponemos la cucharadita de mostaza y vamos añadiendo poco a poco la leche removiendo sin parar para que no se formen grumos. Salpimentamos. Cuando la salsa esté bien ligada y en su punto añadimos 150 gr de queso (reservamos un poco para gratinar) y mezclamos bien. Escurrimos los macarrones del agua de cocción pero sin enjuagarlos y cuando están bien calientes mezclamos con la salsa de queso con movimientos fuertes para que ligue todo bien. Ponemos en un recipiente de horno, cubrimos con el resto del queso y damos un golpe bajo el grill hasta que la superficie dore un poquito. Servimos al momento.",
       "tiempo":"180",
-      "calorias":"345,87"
+      "calorias":"345.87"
     },
     {
-      "nombre":"Arroz negro",
+      "nombre":"arroz negro",
       "alimentos":"400 gr de arroz;180 gramos de marisco;10 gramos de sal;200 gramos de verduras",
       "elaboracion":"Cómo hacer un buen sofrito de paella Poned primero la paella o recipiente a fuego fuerte con aceite de oliva y un poco de sal para que no salpique la carne, añadid la carne (si estáis haciendo paella de marisco el marisco) y doradla. Luego bajad el fuego y añadimos las verduras, dejando que se rehoguen durante unos 5 minutos. Veréis que en este tipo de sofrito para paella no se usa cebolla, ya que los jugos de la misma abren el arroz. El arroz ideal para la paella valenciana El arroz es el principal ingrediente de la paella valenciana, y conseguir un arroz en su punto es el mejor secreto para que vuestra paella brille con luz propia. En alguna ocasión os hemos explicado los distintos tipos de arroz que existen, y en el caso de la paella valenciana el mejor arroz es el arroz bomba, que tiene un grano medio-corto y cuya principal característica es que absorbe más agua que otros arroces. El arroz bomba es más caro que otros arroces pero os aseguramos que la inversión merece la pena ¡vuestra paella ganará muchos puntos!",
       "tiempo":"200",
-      "calorias":"1345,87"
+      "calorias":"1345.87"
     },
     {
-      "nombre":"Tarta de frambuesa",
+      "nombre":"tarta de frambuesa",
       "alimentos":"255 gr de frambuesa;120 gramos de huevos;200 gramos de azúcar;0,25 litros de leche",
       "elaboracion":"Casca los huevos a un bol y rómpelos con una varilla manual. Agrega el azúcar y la harina, y mezcla un poco. Incorpora el queso crema a temperatura ambiente (sin batir) y sigue mezclando. Finalmente vierte la nata líquida y mezcla hasta conseguir una masa homogénea. Cubre un molde desmontable (de 18 centímetros de diámetro) con papel sulfurizado o papel vegetal para horno. Vierte dentro la mezcla y hornéala a 200º durante 40-45 minutos. Retira la tarta de queso del horno y deja reposar (3-4 horas) hasta que se enfríe bien antes de desmoldar. Desmolda la tarta y retírale el papel con cuidado para no romperla. Sirve la tarta de queso La Viña, córtala en porciones y adorna los platos con unas hojas de menta.",
       "tiempo":"360",
       "calorias":"1241"
     },
     {
-      "nombre":"Tarta de limón",
+      "nombre":"tarta de limón",
       "alimentos":"120 gr de limón;120 gramos de huevos;200 gramos de azúcar;0,25 litros de leche",
       "elaboracion":"Trituramos las galletas dentro de una bolsa de plástico bien cerrada y pasando por encima un rodillo. Agregamos la mantequilla a temperatura ambiente o, incluso mejor, ligeramente fundida. Mezclamos bien para obtener una masa homogénea. Cubrimos la base y laterales de un molde desmoldable de 25 cm, aplastando bien para compactar, y guardamos en la nevera o congelador para que endurezca. Mientras tanto preparamos el relleno. Picamos el chocolate y lo calentamos en un cacito junto con la leche, los dos sobres de cuajada y el azúcar durante 10 minutos. Removemos bien para que no queden grumos. Vertemos sobre la base de galletas y dejamos cuajar en la nevera durante cuatro horas aproximadamente. Con un pelador hacemos virutas de chocolate blanco y decoramos la tarta en el momento de servir.",
       "tiempo":"120",
       "calorias":"1500"
     },
     {
-      "nombre":"Crema de champiñones",
+      "nombre":"crema de champiñones",
       "alimentos":"400 gr de champiñones;200 gramos de patata;40 gramos de zanahoria;210 gramos de puerros;1 litro de agua; 0,30 litros de aceite; 1 chucharadita de sal",
       "elaboracion":"Para preparar la crema de champiñones, pon a calentar 5 vasos de agua con 2 cucharadas de aceite de oliva en una cazuela al fuego. Mientras se calienta, prepara las verduras. Para ello, pela la champiñones y córtala en dados grandes. Retira la parte inferior y superior de las zanahorias, pélalas y córtalas en rodajas de 1 centímetro aproximadamente. Limpia el puerro bien para retirar toda la suciedad. Corta un trozo pequeño y resérvalo para decorar los platos. Corta en rodajas el resto del puerro. Por último, pela la patata y trocéala como para guisar, es decir, cáscala con ayuda de un cuchillo. Una vez estén listas las verduras, introdúcelas en la cazuela: la champiñones, las zanahorias, el puerro y la patata. Añade sal a tu gusto.Pon la tapa a la cazuela y deja cocer durante 25 minutos a fuego medio, hasta que las verduras estén blandas. Retira la cazuela del fuego y tritura todo con la batidora eléctrica hasta que quede una crema fina.",
       "tiempo":"120",
