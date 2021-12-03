@@ -9,6 +9,7 @@ on:
       - "recetarium/funciones.py"
       - "recetarium/excepciones.py"
       - "test/test.py"
+      - "setup.py"
       - "Dockerfile"
 
 jobs:
