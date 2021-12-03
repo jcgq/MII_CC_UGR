@@ -182,3 +182,4 @@ def nombre_no_unico(nombre_receta):
 		return True
 	else:
 		return False
+		
