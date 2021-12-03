@@ -1,6 +1,7 @@
 from funciones import *
 import re
 import pandas as pd
+from bottle import response
 class Receta:
 
 	diccionario_unidades = {"unidades":["litro", "litros", "kg", "kilos", "kilo", 
@@ -62,7 +63,7 @@ class Receta:
 	def receta_invalida(self,nombre, alimentos, elaboracion, tiempo):
 		if(Receta.longitudes_incorrectas(nombre, alimentos, elaboracion, tiempo) or
 		Receta.tiempo_incorrecto(tiempo) or
-		Receta.alimentos_incorrectos(alimentos)):
+		Receta.alimentos_incorrectos(alimentos) or nombre_no_unico(nombre)):
 			lanzar_excepcion("Receta", "La receta no es valida")
 			return True
 		else:
@@ -104,11 +105,11 @@ class Receta:
 				lista_elaboracion = df["elaboracion"].values.tolist()
 				ma_tfidf = tf_idf(lista_elaboracion)
 				df = df.assign(similitud = ma_tfidf[df["id"][df["nombre"]== receta].values[0]])
-				resultado = df[(df['contiene_alimento']>1) | (df['calorias_alimentos']<calorias)].sort_values('similitud', ascending=False)
+				resultado = df[(df['contiene_alimento']>=1) & (df['calorias']<calorias)].sort_values(['similitud', 'calorias_alimentos'], ascending=(False, False))
 			else:
-				resultado = df[df['calorias_alimentos']<calorias].sort_values('contiene_alimento', ascending=False)
+				resultado = df[df['calorias_alimentos']<calorias].sort_values(['contiene_alimento', 'calorias_alimentos'], ascending=(False, True))
 		else:
-			resultado = df[df['calorias_alimentos']<calorias].sort_values('contiene_alimento', ascending=False)
+			resultado = df[df['calorias_alimentos']<calorias].sort_values(['contiene_alimento', 'calorias_alimentos'], ascending=(False, True))
 		
 		if not resultado.empty:
 			resultado = resultado[['nombre', 'calorias']].head(3)
