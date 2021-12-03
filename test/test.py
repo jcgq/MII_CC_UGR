@@ -128,11 +128,22 @@ class Test(unittest.TestCase):
         except:
             assert(receta == None)
 
-        #Test incorrecto. El timepo no es válido
+        #Test incorrecto. El tiempo no es válido
         nombre = "Huevo frito"
         alimentos= "1 kilo de champiñones;100 gramos de chocolate"
         elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
         tiempo = ""
+        receta = None
+        try:
+            receta = Receta(nombre, alimentos, elaboracion, tiempo)
+        except:
+            assert(receta == None)
+        
+        #Test incorrecto. El nombre ya existe
+        nombre = "arroz negro"
+        alimentos= "1 kilo de champiñones;100 gramos de chocolate"
+        elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
+        tiempo = "58"
         receta = None
         try:
             receta = Receta(nombre, alimentos, elaboracion, tiempo)
