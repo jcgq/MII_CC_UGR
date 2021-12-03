@@ -6,6 +6,15 @@ from recetas import Receta
 from funciones import *
 import unittest
 class Test(unittest.TestCase):
+    def test_nombre(self):
+        #Test erróneo. El nombre se encuentra en el sistema
+        nombre = "tarta de queso"
+        assert(nombre_no_unico(nombre)==True)
+
+        #Test correcto. El nombre no se encuentra en el sistema
+        nombre = "salmorejo cordobés"
+        assert(nombre_no_unico(nombre)==False)
+
     def test_alimentos(self):
         #Test erróneo. Los alimentos están vacíos o con longitud errónea
         alimento = ""
