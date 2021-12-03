@@ -151,7 +151,6 @@ def obtener_diccionario(datos_alimentos):
 	return diccionario
 
 def aniadir_receta_json(receta):
-			#Definición de la estructura del JSON
 	datos = {
 		'nombre':receta.nombre_receta,
 		'alimentos':receta.alimentos,
@@ -175,3 +174,11 @@ def aniadir_receta_json(receta):
 	with open('json/recetas.json', 'w') as f:
 		f.write(sC)
 		f.close()
+
+def nombre_no_unico(nombre_receta):
+	datos_alimentos = obtener_json()
+	recetas = obtener_diccionario(datos_alimentos)
+	if nombre_receta in recetas:
+		return True
+	else:
+		return False
