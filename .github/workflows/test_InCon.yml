@@ -19,4 +19,5 @@ jobs:
       - name: lanzar test
         run:
           docker pull jcgq/mii_cc_ugr
+        run:
           docker run -t -v `pwd`:/app/test jcgq/mii_cc_ugr
