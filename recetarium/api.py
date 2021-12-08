@@ -39,5 +39,19 @@ def receta(nombre):
 		response.status=200
 		return receta
 
+@get('/recetas')
+def recetas():
+	json_alimentos = obtener_json()
+	recetas = obtener_diccionario(json_alimentos)
+	
+	if len(recetas)==0:
+		logging.error('Error. No existe ninguna receta en el sistema')
+		response.status = 404
+		return "{\"Error\":\"No existen recetas en el sistema\"}"
+	else:
+		logging.info('Éxito. La recetas se encuentran disponible en el sistema.')
+		response.status = 200
+		return recetas
+
 if __name__ == "__main__":
     run(host=confg.host, port=confg.puerto, debug=False, reloader=True)
