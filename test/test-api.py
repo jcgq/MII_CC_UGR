@@ -55,7 +55,9 @@ class TestApi(unittest.TestCase):
         elaboracion = "Haces todo con un cuchillo, una cuchara y verás que maravilla"
         tiempo = 120
 
-        resp = test_app.post('/receta', {'nombre': nombre, 'alimentos': ingredientes, 'elaboracion':elaboracion, 'tiempo':tiempo})
+        with self.assertRaises(webtest.app.AppError):
+            resp = test_app.post('/receta', {'nombre': nombre, 'alimentos': ingredientes, 'elaboracion':elaboracion, 'tiempo':tiempo})
+            assert(resp.status == "404 Error")
         assert(resp.status == "201 Created")
         eliminar_receta_json()
 
