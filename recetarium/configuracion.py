@@ -4,4 +4,3 @@ class Configuracion():
         self.host = "localhost"
         self.ruta_recetas = "./json/recetas.json"
         self.rutas_alimentos = "./json/alimentos_en.json"
-
