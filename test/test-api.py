@@ -51,7 +51,7 @@ class TestApi(unittest.TestCase):
         #Test correcto. La receta se puede añadir al sistema
         test_app = TestApp(app)
         nombre = "Huevo frito"
-        ingredientes = "1 kilo de champiñones;100 gramos de chocolate"
+        ingredientes = "1 kilo de verduras;100 gramos de chocolate"
         elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
         tiempo = "120"
 
