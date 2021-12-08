@@ -7,6 +7,7 @@ from string import punctuation
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
+import logging
 
 #Descargar las stopwords, necesario para la nueva funcionalidad
 nltk.download('stopwords')
@@ -16,7 +17,7 @@ def leer_json_alimentos():
 		try:
 			c = f.read()
 		except FileNotFoundError:
-			print("Error en la lectura del Json")
+			logging.error("Error en la lectura del Json")
 
 	datos_alimentos = json.loads(c)
 	return datos_alimentos
@@ -26,7 +27,6 @@ def obtener_diccionario_alimentos():
 	array_alimentos = []
 
 	array_alimentos = [dato["nombre"] for dato in datos_alimentos]
-
 	diccionario_alimentos = {"alimentos":array_alimentos}
 
 	return diccionario_alimentos
@@ -36,22 +36,22 @@ def lanzar_excepcion(atributo, causa):
 	try:
 		raise MisExcepciones(atributo, causa)
 	except MisExcepciones as e:
-		print("El campo erróneo es " + e.campo)
-		print("El error es " + e.informacion)
+		logging.info("El campo erróneo es " + e.campo)
+		logging.info("El error es " + e.informacion)
 
 def lanzar_excepcion_alimento():
 	try:
 		raise MisExcepciones("Tiempo", "El tiempo está expresado en minutos. No te líes.")
 	except MisExcepciones as e:
-		print("Alimentos")
-		print("El formato de los alimentos es incorrecto")
+		logging.info("Alimentos")
+		logging.info("El formato de los alimentos es incorrecto")
 
 def lanzar_excepcion_tiempo():
 	try:
 		raise MisExcepciones("Tiempo", "El tiempo está expresado en minutos. No te líes.")
 	except MisExcepciones as e:
-		print("Tiempo")
-		print("El formato de los minutos no es el adecuado")
+		logging.info("Tiempo")
+		logging.info("El formato de los minutos no es el adecuado")
 
 def comprobar_numero(numero):
 	numero = numero.strip()
@@ -163,7 +163,11 @@ def aniadir_receta_json(receta):
 
 	#Lectura
 	with open('json/recetas.json', 'r') as f:
-		c = f.read()
+		try:
+			c = f.read()
+		except FileNotFoundError:
+			response.status = 400
+			return "{'Error':'404 Fichero no encontrado'}"
 
 	datosMod = json.dumps(datos)
 	s = json.loads(c)
@@ -172,8 +176,13 @@ def aniadir_receta_json(receta):
 
 	#Escritura
 	with open('json/recetas.json', 'w') as f:
-		f.write(sC)
-		f.close()
+		try:
+			f.write(sC)
+			f.close()
+		except FileNotFoundError:
+			response.status = 400
+			return "{'Error':'404 Fichero no encontrado'}"
+		
 
 def nombre_no_unico(nombre_receta):
 	datos_alimentos = obtener_json()
