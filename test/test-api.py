@@ -50,14 +50,14 @@ class TestApi(unittest.TestCase):
 
         #Test correcto. La receta se puede añadir al sistema
         test_app = TestApp(app)
-        nombre = "pollo frito chino"
-        ingredientes = "345 gramos de verduras;100 gramos de chocolate"
-        elaboracion = "Haces todo con un cuchillo, una cuchara y verás que maravilla"
-        tiempo = 120
+        nombre = "Huevo frito"
+        ingredientes = "1 kilo de champiñones;100 gramos de chocolate"
+        elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
+        tiempo = "120"
 
         resp = test_app.post('/receta', {'nombre': nombre, 'alimentos': ingredientes, 'elaboracion':elaboracion, 'tiempo':tiempo})
         assert(resp.status == "201 Created")
-        #eliminar_receta_json()
+        eliminar_receta_json()
 
     def test_recomendar_recetas(self):
         
