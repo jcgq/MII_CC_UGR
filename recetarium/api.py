@@ -89,7 +89,7 @@ def crear_receta():
 		response.status = 404
 		logging.error('Receta incorrecta')
 		return "Error"
-
+	aniadir_receta_json(receta)
 	logging.info('Receta creada y añadida con éxito')
 	response.status = 201
 	return '{"Éxito!" : "Receta añadida al sistema"}'
