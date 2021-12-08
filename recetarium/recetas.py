@@ -1,7 +1,11 @@
+import logging
 from funciones import *
 import re
 import pandas as pd
 from bottle import response
+from configuracion import *
+
+confg = Configuracion()
 class Receta:
 
 	diccionario_unidades = {"unidades":["litro", "litros", "kg", "kilos", "kilo", 
@@ -15,13 +19,15 @@ class Receta:
 	longitud_min_elaboracion = 20
 
 	def __init__(self, nombre_receta, alimentos, elaboracion, tiempo):
-		if not self.receta_invalida(nombre_receta, alimentos, elaboracion, tiempo) and Receta.obtener_puntuacion(0.7,Receta.obtener_recetas(elaboracion)):
-				self.nombre_receta = nombre_receta
-				self.alimentos = alimentos
-				self.elaboracion = elaboracion
-				self.tiempo = tiempo
-				self.calorias = Receta.calcular_calorias(alimentos)
+		if not self.receta_invalida(nombre_receta, alimentos, elaboracion, tiempo) and Receta.obtener_puntuacion(0.7,Receta.obtener_recetas(elaboracion)):	
+			self.nombre_receta = nombre_receta
+			self.alimentos = alimentos
+			self.elaboracion = elaboracion
+			self.tiempo = tiempo
+			self.calorias = Receta.calcular_calorias(alimentos)
+			aniadir_receta_json(self)
 		else:
+			response.status = 404
 			raise MisExcepciones("Receta", "Los atributos de la receta tienen errores")
 
 	def longitudes_incorrectas(nombre_receta, alimentos,  elaboracion, tiempo):
@@ -37,7 +43,6 @@ class Receta:
 		alimentos = alimentos.split(";")
 		for i in range(0, len(alimentos)):
 			if not any(alimento in alimentos[i] for alimento in Receta.diccionario_alimentos["alimentos"]):
-				print(alimentos)
 				lanzar_excepcion_alimento()
 				return True
 			if not any(unidad in alimentos[i] for unidad in Receta.diccionario_unidades["unidades"]):
@@ -70,11 +75,11 @@ class Receta:
 			return False
 
 	def obtener_recetas(elaboracion):
-		with open('./json/recetas.json', 'r') as f:
+		with open(confg.ruta_recetas, 'r') as f:
 			try:
 				c = f.read()
 			except FileNotFoundError:
-				print("Error en la lectura del Json")
+				logging.error("Error en la lectura del Json")
 		datos_recetas = json.loads(c)
 		elaboraciones = [dato["elaboracion"] for dato in datos_recetas]
 		elaboraciones.insert(0, elaboracion)
