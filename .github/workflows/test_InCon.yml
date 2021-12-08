@@ -17,7 +17,6 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: lanzar test
-        run:
+        run: |
           docker pull jcgq/mii_cc_ugr
-        run:
           docker run -t -v `pwd`:/app/test jcgq/mii_cc_ugr
