@@ -4,11 +4,10 @@ on:
   push:
     paths:
       - ".github/workflows/test_InCon.yml"
-      - "recetarium/recetas.py"
-      - "recetarium/funciones.py"
-      - "test/test.py"
+      - "recetarium/*"
+      - "test/*"
       - "Dockerfile"
-      - "json/recetas.json"
+      - "json/*"
 
 jobs:
   lanzar_test:
