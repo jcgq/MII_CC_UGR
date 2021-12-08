@@ -156,7 +156,7 @@ def aniadir_receta_json(receta):
 		'alimentos':receta.alimentos,
 		'elaboracion':receta.elaboracion,
 		'tiempo':receta.tiempo,
-		'calorias':receta.calorias
+		'calorias':str(receta.calorias)
 	}
 
 	cadena_json = json.dumps(datos)
