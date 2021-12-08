@@ -4,6 +4,7 @@ import os
 @task()
 def test(c):
     os.system("pytest test/test.py")
+    os.system("pytest test/test-api.py")
 
 @task()
 def installdeps(c):
