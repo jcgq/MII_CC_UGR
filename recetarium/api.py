@@ -1,4 +1,3 @@
-import requests
 import bottle
 import os
 from bottle import get, post, run, route, response, error, request
