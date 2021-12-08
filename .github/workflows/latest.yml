@@ -9,7 +9,6 @@ on:
       - "test/test.py"
       - "setup.py"
       - "Dockerfile"
-      - "recetarium/api.py"
 
 jobs:
   push_to_registry:
