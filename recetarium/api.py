@@ -61,7 +61,7 @@ def recomendacion():
 
 	lista = Receta.buscar_receta(ingredientes, nombre_receta, float(calorias)).values.tolist()
 	recetas = obtener_diccionario(obtener_json())
-	
+
 	recomendacion = []
 	for i in range(0, len(lista)):
 		recomendacion.append(recetas[lista[i][0]])
@@ -76,6 +76,28 @@ def recomendacion():
 		logging.info('Éxito. La recomendación se encuentran disponible en el sistema.')
 		response.status = 200
 		return recomendacion
+
+@post('/receta')
+def crear_receta():
+	nombre = unquote(request.forms.get('nombre'))
+	elaboracion = unquote(request.forms.get('elaboracion'))
+	alimentos = unquote(request.forms.get('alimentos'))
+	tiempo = request.forms.get('tiempo')
+
+	try:
+		receta = Receta(nombre, alimentos, elaboracion, tiempo)
+	except Exception as error:
+		response.status = 404
+		logging.error('Receta incorrecta')
+		return "Error"
+
+	logging.info('Receta creada y añadida con éxito')
+	response.status = 201
+	return '{"Éxito!" : "Receta añadida al sistema"}'
+
+@error(404)
+def error_url(error):
+	return '{"Error!" : "La ruta no existe","Recetas":"/recetas"}'
 
 if __name__ == "__main__":
     run(host=confg.host, port=confg.puerto, debug=False, reloader=True)
