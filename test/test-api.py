@@ -57,7 +57,7 @@ class TestApi(unittest.TestCase):
 
         resp = test_app.post('/receta', {'nombre': nombre, 'alimentos': ingredientes, 'elaboracion':elaboracion, 'tiempo':tiempo})
         assert(resp.status == "201 Created")
-        eliminar_receta_json()
+        #eliminar_receta_json()
 
     def test_recomendar_recetas(self):
         
