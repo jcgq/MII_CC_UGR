@@ -191,4 +191,23 @@ def nombre_no_unico(nombre_receta):
 		return True
 	else:
 		return False
-		
+
+def eliminar_receta_json():
+	#Lectura
+	with open('json/recetas.json', 'r') as f:
+		try:
+			c = json.load(f)
+		except FileNotFoundError:
+			response.status = 400
+			return "{'Error':'404 Fichero no encontrado'}"
+
+	c.pop()
+	sC = json.dumps(c, indent=4)
+	#Escritura
+	with open('json/recetas.json', 'w') as f:
+		try:
+			f.write(sC)
+			f.close()
+		except FileNotFoundError:
+			response.status = 400
+			return "{'Error':'404 Fichero no encontrado'}"
