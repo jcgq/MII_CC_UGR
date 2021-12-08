@@ -5,7 +5,7 @@ on:
   push:
     paths:
       - ".github/workflows/latest.yml"
-      - "recetarium/*
+      - "recetarium/*"
       - "test/test.py"
       - "setup.py"
       - "Dockerfile"
