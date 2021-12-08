@@ -5,6 +5,8 @@ on:
     paths:
       - "Dockerfile"
       - ".github/workflows/githubcr.yml"
+      - "recetarium/api.py"
+      - "setup.py"
 #Variable de entorno que será nuestro repositorio
 env:
   REGISTRY: ghcr.io
