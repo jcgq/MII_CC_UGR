@@ -53,5 +53,29 @@ def recetas():
 		response.status = 200
 		return recetas
 
+@post('/recomendacion')
+def recomendacion():
+	nombre_receta = unquote(request.forms.get('receta'))
+	ingredientes = unquote(request.forms.get('ingredientes')).split(",")
+	calorias = request.forms.get('calorias')
+
+	lista = Receta.buscar_receta(ingredientes, nombre_receta, float(calorias)).values.tolist()
+	recetas = obtener_diccionario(obtener_json())
+	
+	recomendacion = []
+	for i in range(0, len(lista)):
+		recomendacion.append(recetas[lista[i][0]])
+
+	recomendacion = json.dumps(recomendacion, indent=4)
+
+	if len(recomendacion)==2:
+		logging.error('Error. No existe ninguna recomendación a lo solicitado')
+		response.status = 404
+		return "{\"Error\":\"No existe una recomendación con esos criterios\"}"
+	else:
+		logging.info('Éxito. La recomendación se encuentran disponible en el sistema.')
+		response.status = 200
+		return recomendacion
+
 if __name__ == "__main__":
     run(host=confg.host, port=confg.puerto, debug=False, reloader=True)
