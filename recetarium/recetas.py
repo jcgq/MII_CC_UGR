@@ -20,13 +20,11 @@ class Receta:
 
 	def __init__(self, nombre_receta, alimentos, elaboracion, tiempo):
 		if not self.receta_invalida(nombre_receta, alimentos, elaboracion, tiempo) and Receta.obtener_puntuacion(0.7,Receta.obtener_recetas(elaboracion)):	
-			print("Creando receta...")
 			self.nombre_receta = nombre_receta
 			self.alimentos = alimentos
 			self.elaboracion = elaboracion
 			self.tiempo = tiempo
 			self.calorias = Receta.calcular_calorias(alimentos)
-			print("Llego hasya aqui")
 		else:
 			response.status = 404
 			raise MisExcepciones("Receta", "Los atributos de la receta tienen errores")
@@ -70,11 +68,9 @@ class Receta:
 		if(Receta.longitudes_incorrectas(nombre, alimentos, elaboracion, tiempo) or
 		Receta.tiempo_incorrecto(tiempo) or
 		Receta.alimentos_incorrectos(alimentos) or nombre_no_unico(nombre)):
-			print("Error por que la longitud o formato es incorrecto")
 			lanzar_excepcion("Receta", "La receta no es valida")
 			return True
 		else:
-			print("Nuevamente correcto")
 			return False
 
 	def obtener_recetas(elaboracion):
@@ -95,7 +91,6 @@ class Receta:
 		for i in range(1, len(aux)):
 			if aux[i]>=puntuacion:
 				apta = False
-				print("Error en la similitud")
 		return apta
 
 	def calcular_calorias(alimentos):
