@@ -19,5 +19,8 @@ USER app
 #Establecemos el directorio de trabajo
 WORKDIR /app/test
 
+#Abrimos el puerto
+EXPOSE 80:80
+
 #Realizamos los tests
 CMD ["invoke", "test"]
