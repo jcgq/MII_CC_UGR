@@ -55,7 +55,7 @@ class TestApi(unittest.TestCase):
         elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
         tiempo = "120"
 
-        resp = test_app.post('/receta', {'nombre': nombre, 'alimentos': ingredientes, 'elaboracion':elaboracion, 'tiempo':tiempo})
+        resp = test_app.post('/receta', {'nombre': nombre, 'elaboracion':elaboracion, 'alimentos': ingredientes, 'tiempo':tiempo})
         assert(resp.status == "201 Created")
         eliminar_receta_json()
 
@@ -82,4 +82,4 @@ class TestApi(unittest.TestCase):
 
 if __name__ == "__main__":
     TestApi.main()
-    #Prueba test_1
+    #Prueba test_2
