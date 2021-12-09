@@ -188,9 +188,6 @@ def nombre_no_unico(nombre_receta):
 	datos_alimentos = obtener_json()
 	recetas = obtener_diccionario(datos_alimentos)
 	if nombre_receta in recetas:
-		print(recetas)
-		print("El nombre es ", nombre_receta)
-		print("ERRORRR")
 		print("Nombre no unico")
 		logging.error("El nombre no es único")
 		return True

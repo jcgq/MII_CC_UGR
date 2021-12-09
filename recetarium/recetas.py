@@ -72,6 +72,7 @@ class Receta:
 			lanzar_excepcion("Receta", "La receta no es valida")
 			return True
 		else:
+			print("Nuevamente correcto")
 			return False
 
 	def obtener_recetas(elaboracion):
