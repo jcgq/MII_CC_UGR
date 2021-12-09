@@ -84,15 +84,12 @@ def crear_receta():
 	tiempo = request.forms.get('tiempo')
 
 	try:
-		print("Entrando...")
 		receta = Receta(nombre, alimentos, elaboracion, tiempo)
 		logging.info('Receta creada y añadida con éxito')
 		response.status = 201
-		print("Saliendo...")
 		return '{"Éxito!" : "Receta añadida al sistema"}'
 		
 	except Exception as error:
-		print(error)
 		response.status = 404
 		logging.error('Receta incorrecta')
 		return "Error"
