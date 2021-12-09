@@ -86,7 +86,6 @@ def crear_receta():
 	try:
 		print("Entrando...")
 		receta = Receta(nombre, alimentos, elaboracion, tiempo)
-		aniadir_receta_json(receta)
 		logging.info('Receta creada y añadida con éxito')
 		response.status = 201
 		print("Saliendo...")
