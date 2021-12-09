@@ -68,6 +68,7 @@ class Receta:
 		if(Receta.longitudes_incorrectas(nombre, alimentos, elaboracion, tiempo) or
 		Receta.tiempo_incorrecto(tiempo) or
 		Receta.alimentos_incorrectos(alimentos) or nombre_no_unico(nombre)):
+			print("Error por que la longitud o formato es incorrecto")
 			lanzar_excepcion("Receta", "La receta no es valida")
 			return True
 		else:
@@ -91,6 +92,7 @@ class Receta:
 		for i in range(1, len(aux)):
 			if aux[i]>=puntuacion:
 				apta = False
+				print("Error en la similitud")
 		return apta
 
 	def calcular_calorias(alimentos):
