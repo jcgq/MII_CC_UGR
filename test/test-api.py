@@ -37,16 +37,6 @@ class TestApi(unittest.TestCase):
             assert(resp.status == "404 Error")
 
     def test_aniadir_receta(self):
-        #Test incorrecto. La receta ya está en el sistema
-        test_app = TestApp(app)
-        nombre = quote("tarta de queso")
-        ingredientes = quote("345 gramos de verduras;2 ralladuras de manzanas;1 cucharadita de sal")
-        elaboracion = quote("Dale candela de la buena macarena")
-        tiempo = 120
-
-        with self.assertRaises(webtest.app.AppError):
-            resp = test_app.post('/receta', {'nombre': nombre, 'alimentos': ingredientes, 'elaboracion':elaboracion, 'tiempo':tiempo})
-            assert(resp.status == "404 Error")
 
         #Test correcto. La receta se puede añadir al sistema
         test_app = TestApp(app)
