@@ -37,6 +37,49 @@ class TestApi(unittest.TestCase):
             assert(resp.status == "404 Error")
 
     def test_aniadir_receta(self):
+        #Test Incorrecto. El nombre de la receta ya existe
+        test_app = TestApp(app)
+        nombre = "tarta de queso"
+        ingredientes = "1 kilo de verduras;100 gramos de chocolate"
+        elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
+        tiempo = "120"
+        #Test con status Incorrecto
+        with self.assertRaises(webtest.app.AppError):
+            resp = test_app.post('/receta', {'nombre': nombre, 'elaboracion':elaboracion, 'alimentos': ingredientes, 'tiempo':tiempo})
+            assert(resp.status == "404 Error")
+
+        #Test Incorrecto. Los ingredientes no están en la base de datos
+        test_app = TestApp(app)
+        nombre = "Salmorejo"
+        ingredientes = "1 kilo de almendras;100 gramos de chocolate"
+        elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
+        tiempo = "120"
+        #Test con status Incorrecto
+        with self.assertRaises(webtest.app.AppError):
+            resp = test_app.post('/receta', {'nombre': nombre, 'elaboracion':elaboracion, 'alimentos': ingredientes, 'tiempo':tiempo})
+            assert(resp.status == "404 Error")
+
+        #Test Incorrecto. La elaboración está repetida
+        test_app = TestApp(app)
+        nombre = "Salmorejo"
+        ingredientes = "1 kilo de almendras;100 gramos de chocolate"
+        elaboracion = "mucho esemero y paciencia"
+        tiempo = "120"
+        #Test con status Incorrecto
+        with self.assertRaises(webtest.app.AppError):
+            resp = test_app.post('/receta', {'nombre': nombre, 'elaboracion':elaboracion, 'alimentos': ingredientes, 'tiempo':tiempo})
+            assert(resp.status == "404 Error")
+
+        #Test Incorrecto. No es un tiempo adecuado
+        test_app = TestApp(app)
+        nombre = "Salmorejo"
+        ingredientes = "1 kilo de almendras;100 gramos de chocolate"
+        elaboracion = "Hay que remover todo con la espátula y que el aceite esté bien caliente"
+        tiempo = "hola"
+        #Test con status Incorrecto
+        with self.assertRaises(webtest.app.AppError):
+            resp = test_app.post('/receta', {'nombre': nombre, 'elaboracion':elaboracion, 'alimentos': ingredientes, 'tiempo':tiempo})
+            assert(resp.status == "404 Error")
 
         #Test correcto. La receta se puede añadir al sistema
         test_app = TestApp(app)
