@@ -6,4 +6,5 @@ test:
   - test/test.py
 fichero_tareas:
   - tasks.py
-  
+
+make: invoke
