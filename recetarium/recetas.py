@@ -20,6 +20,7 @@ class Receta:
 
 	def __init__(self, nombre_receta, alimentos, elaboracion, tiempo):
 		if not self.receta_invalida(nombre_receta, alimentos, elaboracion, tiempo) and Receta.obtener_puntuacion(0.7,Receta.obtener_recetas(elaboracion)):	
+			print("Creando receta...")
 			self.nombre_receta = nombre_receta
 			self.alimentos = alimentos
 			self.elaboracion = elaboracion
