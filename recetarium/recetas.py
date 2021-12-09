@@ -26,7 +26,7 @@ class Receta:
 			self.elaboracion = elaboracion
 			self.tiempo = tiempo
 			self.calorias = Receta.calcular_calorias(alimentos)
-			response.status = 201
+			print("Llego hasya aqui")
 		else:
 			response.status = 404
 			raise MisExcepciones("Receta", "Los atributos de la receta tienen errores")
