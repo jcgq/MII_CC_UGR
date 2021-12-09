@@ -84,7 +84,9 @@ def crear_receta():
 	tiempo = request.forms.get('tiempo')
 
 	try:
+		print("Entrando...")
 		receta = Receta(nombre, alimentos, elaboracion, tiempo)
+		print("Saliendo...")
 	except Exception as error:
 		print(error)
 		response.status = 404
