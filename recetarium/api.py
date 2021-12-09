@@ -86,6 +86,7 @@ def crear_receta():
 	try:
 		receta = Receta(nombre, alimentos, elaboracion, tiempo)
 	except Exception as error:
+		print(error)
 		response.status = 404
 		logging.error('Receta incorrecta')
 		return "Error"
