@@ -1,0 +1,6 @@
+2021-12-01 13:46:28,383 : INFO : Prueba de logging basica
+2021-12-01 13:46:28,383 : WARNING : Este programa no ha hecho nada
+2021-12-01 13:46:32,615 : ERROR : Receta incorrecta
+2021-12-01 13:47:08,706 : ERROR : Receta incorrecta
+2021-12-01 13:47:33,507 : ERROR : Receta incorrecta
+2021-12-01 13:47:48,073 : INFO : Éxito. La recetas se encuentran disponible en el sistema.
