@@ -18,6 +18,9 @@ Para el desarrollo de la API, se utilizará Bottle 🧪, un micro-framework así
 
 Para conocer el esutidio realizado para su elección, [pulse aquí](doc/5Framework.md)
 
+## Diseño de la API
+
+En el [siguiente archivo](doc/5ApiHU.md), puede ver de forma clara y concreta, la explicación de la creación de la API en relación con las historias de usuario.
 
 # User Journey ✈️
 Podrá leerlo en el siguiente enlace [Clique aquí](https://github.com/jcgq/MII_CC_UGR/wiki)
