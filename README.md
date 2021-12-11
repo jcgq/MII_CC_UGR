@@ -13,7 +13,11 @@
 - ⚗️ Integración continua, [¿cómo funciona?](doc/ci.md)
 
 # API Rest
-En progreso...
+## Framework
+Para el desarrollo de la API, se utilizará Bottle 🧪, un micro-framework asíncrono.
+
+Para conocer el esutidio realizado para su elección, [pulse aquí](doc/5Framework.md)
+
 
 # User Journey ✈️
 Podrá leerlo en el siguiente enlace [Clique aquí](https://github.com/jcgq/MII_CC_UGR/wiki)
