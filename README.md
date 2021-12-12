@@ -22,6 +22,12 @@ Para conocer el esutidio realizado para su elección, [pulse aquí](doc/5Framewo
 
 En el [siguiente archivo](doc/5ApiHU.md), puede ver de forma clara y concreta, la explicación de la creación de la API en relación con las historias de usuario.
 
+## Configuración distribuida
+
+Con el fin de poder optener información como el puerto y el host, o algunas rutas que se repiten en varias partes de nuestro proyecto y para evitar repetir su escritura y facilitar el cambio sin tener que editar más de un archivo, se hará uso de una clase [configuración](recetarium/configuracion.py).
+
+Para obtener más información al respecto, visite el siguiente [enlace](5cd.md)
+
 # User Journey ✈️
 Podrá leerlo en el siguiente enlace [Clique aquí](https://github.com/jcgq/MII_CC_UGR/wiki)
 
