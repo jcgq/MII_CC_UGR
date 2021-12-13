@@ -7,4 +7,4 @@ test:
 fichero_tareas:
   - tasks.py
 
-make: invoke
+make: invoke installdeps invoke test
