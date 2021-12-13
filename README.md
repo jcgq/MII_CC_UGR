@@ -26,7 +26,12 @@ En el [siguiente archivo](doc/5ApiHU.md), puede ver de forma clara y concreta, l
 
 Con el fin de poder optener información como el puerto y el host, o algunas rutas que se repiten en varias partes de nuestro proyecto y para evitar repetir su escritura y facilitar el cambio sin tener que editar más de un archivo, se hará uso de una clase [configuración](recetarium/configuracion.py).
 
-Para obtener más información al respecto, visite el siguiente [enlace](5cd.md)
+Para obtener más información al respecto, visite el siguiente [enlace](doc/5cd.md)
+
+## Uso de logs
+
+La utilización de logs en python, se utilizará para saber qué parte de la secuencia de comandos se está ejecutando e inspeccionar qué valores tienen las variables.
+Para más información sobre el logging, pulse [aquí](doc/5logs.md)
 
 # User Journey ✈️
 Podrá leerlo en el siguiente enlace [Clique aquí](https://github.com/jcgq/MII_CC_UGR/wiki)
