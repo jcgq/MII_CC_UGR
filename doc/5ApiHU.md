@@ -38,3 +38,10 @@ Devolverá error si el sistema no ha introducido una receta correcta.
 def error_url(error):
 	return '{"Error!" : "La ruta no existe","Recetas":"/recetas"}'
 ```
+
+## Test Asíncronos
+Una de las ventajas de [Bottle](https://github.com/bottlepy/bottle/issues/42), es que es un framework asíncrono, y teniendo en cuenta de que Python, está actualizando las características para que en su mayoría por defecto las acciones se realicen de froma síncrona, no es necesario el uso de "async" o de "await". 
+
+Cuando se definen como test asíncronos, si se ejecutan, obtenemos el siguiente warning:
+
+<img src="imagenes/testConAsync.png" width="600" height="280">
