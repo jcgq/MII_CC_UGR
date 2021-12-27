@@ -19,7 +19,7 @@ logging.basicConfig(filename='fichero.log',
 @route('/')
 def recetas_contador():
 	logging.info("Estás en la página de inicio")
-	response.status = 204
+	response.status = 200
 	return '{"Bienvenid@!" : "A mi API de Recetas"}'
 
 @get('/recetas/<nombre>')
