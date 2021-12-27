@@ -16,7 +16,7 @@
 
 # Composición de servicios
 
-En consrucción...
+En construcción...
 # User Journey ✈️
 Podrá leerlo en el siguiente enlace [Clique aquí](https://github.com/jcgq/MII_CC_UGR/wiki)
 
