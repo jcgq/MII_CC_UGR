@@ -15,8 +15,15 @@
 - 🧪 ApiREST, [conoce su desarrollo](doc/5Api.md)
 
 # Composición de servicios
+<img src="doc/imagenes/recetarium.png" width="180" height="150">
+
+Bienvenido a Recetarium, donde podrás encontrar recetas adaptadas a tus dietas y conocer cómo de calórica es la comida que te preparas, ¿te apuntas al reto?
+
+
+
 
 En construcción...
+
 # User Journey ✈️
 Podrá leerlo en el siguiente enlace [Clique aquí](https://github.com/jcgq/MII_CC_UGR/wiki)
 
